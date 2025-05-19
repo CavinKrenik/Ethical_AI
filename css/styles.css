@@ -1,0 +1,263 @@
+/* styles.css */
+
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../images/backg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Overlay for readability */
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Navbar styles */
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Transparent content boxes */
+.transparent-box {
+  background: rgba(10,10,10,0.85);
+  color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  padding: 2rem 2.5rem;
+  margin: 1.5rem 0;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Columns layout */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.columns > div {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* AI Columns layout */
+.ai-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.ai-columns ul {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 500px;
+  list-style: disc inside;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.ai-columns li {
+  margin-bottom: 1.5em;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #aaa;
+}
+
+/* Centered heading style */
+.center-heading {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* Two column flexbox layout */
+.two-column-flex {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Avatar flexbox layout */
+.avatar-flex-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.avatar-flex-row .transparent-box {
+  min-width: 280px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Scalable image for fluid layouts */
+.scalable-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .ai-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ai-columns ul {
+    max-width: 600px;
+  }
+  .avatar-flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .two-column-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .transparent-box {
+    max-width: 95vw;
+  }
+}
+
+/* ... (your existing styles) ... */
+
+.transparent-box h2 {
+  margin-top: 0; /* Good practice if it's the first element */
+  /* Add any specific styling for h2 if not already done */
+}
+
+/* Styling for the "Key Insights You'll Gain Here" list */
+.transparent-box ul {
+  list-style-type: none; /* Removes default bullets if you prefer custom styling */
+  padding-left: 0; /* Removes default padding */
+}
+
+.transparent-box ul li {
+  margin-bottom: 15px; /* Space between list items */
+  padding-left: 25px; /* Indent text if using a custom bullet or background icon */
+  position: relative; /* Useful for custom bullets */
+  line-height: 1.6;
+}
+
+/* Optional: Custom bullets for the "Key Insights" list */
+/* .transparent-box ul li::before {
+  content: '⭐'; /* Or any other icon/emoji/image */
+  /* position: absolute; */
+  /* left: 0; */
+  /* color: #007bff; */ /* Example color */
+/* } */
+
+/* Styling for "Explore Our Core Topics" section */
+.topic-links {
+  display: grid; /* Using grid for a flexible layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between topic items */
+  margin-top: 20px;
+}
+
+.topic-link-item {
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly different background for items */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-link-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.topic-link-item h3 {
+  margin-top: 0;
+  color: #0056b3; /* Example color for topic titles */
+}
+
+.topic-link-item h3 a {
+  text-decoration: none;
+  color: inherit; /* Inherits color from h3 */
+}
+
+.topic-link-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.topic-link-item p {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for topic links if needed */
+@media (max-width: 600px) {
+  .topic-links {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+}
