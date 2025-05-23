@@ -5,7 +5,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('images/backg.png') no-repeat center center fixed;
+  background: url('images/bkg.gif') no-repeat center center fixed;
   background-size: cover;
   color: white;
 }
@@ -298,6 +298,45 @@ footer {
   .topic-links {
     grid-template-columns: 1fr; /* Stack items on smaller screens */
   }
+
+  
+}
+
+/* Gallery container: stacks image rows vertically */
+.gallery-container {
+  display: grid; /* You can use grid or flex here */
+  gap: 24px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+/* Each image row: horizontal scroll with flexbox */
+.image-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden; /* Hide scrollbar for continuous scroll */
+  padding: 10px 0;
+  background: #fff;
+  border-radius: 8px;
+  gap: 12px;
+  /* Remove scrollbars for a cleaner look */
+  scrollbar-width: none;
+}
+.image-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style for individual images */
+.image-row img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #eee;
+}
+.image-row img:last-child {
+  margin-right: 0;
 }
 
 
