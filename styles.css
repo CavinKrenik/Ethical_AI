@@ -352,3 +352,41 @@ footer {
 8888888888  "Y888 888  888 888  "Y8888P "Y888888 888      d88P     888 Y8P 8888888 Y8P 
         
                                                                                         */
+
+/* AI Tips Page: Functional columns/rows for prompt tips and politeness section */
+.tips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.tips-col {
+  flex: 1 1 340px;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+@media (max-width: 900px) {
+  .tips-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tips-col {
+    max-width: 100%;
+  }
+}
+.example-row {
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.final-thoughts {
+  margin-top: 2rem;
+  text-align: left;
+}
