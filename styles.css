@@ -135,6 +135,16 @@ footer {
   color: #aaa;
 }
 
+/* General link color for better visibility */
+a {
+  color: #66ccff; /* A brighter blue for better contrast */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* Centered heading style */
 .center-heading {
   text-align: center;
@@ -192,10 +202,20 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Modified nav bar media query */
+@media screen and (max-width: 600px) { /* Changed from 480px to 600px */
   .navbar ul {
     flex-direction: column;
     text-align: center;
+    padding: 0; /* Ensure no extra padding causes overflow */
+    margin: 0; /* Ensure no extra margin causes overflow */
+  }
+  .navbar a {
+    padding: 8px 10px; /* Slightly less padding for vertical items */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+  }
+  .navbar li:last-child a {
+    border-bottom: none; /* No separator for the last item */
   }
 }
 
@@ -265,17 +285,17 @@ footer {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: none; /* Remove transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .topic-link-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transform: none; /* Remove transform on hover */
+  box-shadow: none; /* Remove box-shadow on hover */
 }
 
 .topic-link-item h3 {
   margin-top: 0;
-  color: #0056b3; /* Example color for topic titles */
+  /* color: #0056b3; Example color for topic titles - removed to allow general 'a' rule to apply */
 }
 
 .topic-link-item h3 a {
@@ -285,6 +305,7 @@ footer {
 
 .topic-link-item h3 a:hover {
   text-decoration: underline;
+  color: #a0dfff; /* A slightly lighter blue for emphasis */
 }
 
 .topic-link-item p {
@@ -387,9 +408,7 @@ footer {
   text-align: left;
 }
 
-/*  
-
-8888888888 888    888      d8b                   888             d8888     8888888     
+/* 8888888888 888    888      d8b                   888             d8888     8888888     
 888        888    888      Y8P                   888            d88888       888       
 888        888    888                            888           d88P888       888       
 8888888    888888 88888b.  888  .d8888b  8888b.  888          d88P 888       888       
