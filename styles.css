@@ -57,23 +57,13 @@ header {
   border-radius: 1rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5);
   padding: 2rem 2.5rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto; /* Centered margin for all transparent-boxes */
   max-width: 600px;
   width: 100%;
   text-align: left;
   box-sizing: border-box;
-  word-break: break-word;
+  word-break: break-word; /* Using break-word for general transparent box content */
   overflow-wrap: break-word;
-}
-
-/* Ensure flex items don't overflow and text wraps nicely */
-.transparent-box {
-  max-width: 600px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 2rem 2.5rem;
-  word-break: break-word;      /* Break long words if needed */
-  overflow-wrap: break-word;   /* Ensures text wraps within the box */
 }
 
 /* Responsive: Reduce padding and font size on smaller screens */
@@ -244,11 +234,8 @@ a:hover {
   }
 }
 
-/* ... (your existing styles) ... */
-
 .transparent-box h2 {
   margin-top: 0; /* Good practice if it's the first element */
-  /* Add any specific styling for h2 if not already done */
 }
 
 /* Styling for the "Key Insights You'll Gain Here" list */
@@ -266,10 +253,10 @@ a:hover {
 
 /* Optional: Custom bullets for the "Key Insights" list */
 /* .transparent-box ul li::before {
-  content: '⭐'; /* Or any other icon/emoji/image */
-  /* position: absolute; */
-  /* left: 0; */
-  /* color: #007bff; */ /* Example color */
+   content: '⭐'; /* Or any other icon/emoji/image */
+/* position: absolute; */
+/* left: 0; */
+/* color: #007bff; */ /* Example color */
 /* } */
 
 /* Styling for "Explore Our Core Topics" section */
@@ -319,8 +306,6 @@ a:hover {
   .topic-links {
     grid-template-columns: 1fr; /* Stack items on smaller screens */
   }
-
-  
 }
 
 /* Gallery container: stacks image rows vertically */
@@ -408,13 +393,152 @@ a:hover {
   text-align: left;
 }
 
-/* 8888888888 888    888      d8b                   888             d8888     8888888     
-888        888    888      Y8P                   888            d88888       888       
-888        888    888                            888           d88P888       888       
-8888888    888888 88888b.  888  .d8888b  8888b.  888          d88P 888       888       
-888        888    888 "88b 888 d88P"        "88b 888         d88P  888       888       
-888        888    888  888 888 888      .d888888 888        d88P   888       888       
-888        Y88b.  888  888 888 Y88b.    888  888 888       d8888888888 d8b   888   d8b 
-8888888888  "Y888 888  888 888  "Y8888P "Y888888 888      d88P     888 Y8P 8888888 Y8P 
-                                                                                        
-*/
+/* --- AI Tables Styles (General for both ai-tools-table and ai-tips-table) --- */
+.ai-tools-table,
+.ai-tips-table {
+  width: 98%; /* Keep it within 98% of its parent for small margins */
+  min-width: unset; /* Remove fixed min-width to allow shrinking below 700px */
+  max-width: 1200px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem auto;
+  font-size: 1.05rem;
+  background: rgba(30, 40, 60, 0.98);
+  border-radius: 10px;
+  /* Removed overflow: hidden from here, as the parent div handles it */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  table-layout: fixed; /* This is crucial: ensures columns have a fixed width */
+}
+
+.ai-tools-table th,
+.ai-tools-table td,
+.ai-tips-table th,
+.ai-tips-table td {
+  padding: 0.7em 1em;
+  text-align: left;
+  border-right: 2px solid #111; /* vertical black lines */
+  /* Using overflow-wrap for better word breaking, removing aggressive word-break: break-all; */
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* Older browser fallback */
+}
+
+.ai-tools-table th:last-child,
+.ai-tools-table td:last-child,
+.ai-tips-table th:last-child,
+.ai-tips-table td:last-child {
+  border-right: none;
+}
+
+.ai-tools-table th,
+.ai-tips-table th {
+  background: #223344;
+  color: #b5e0ff;
+  border-bottom: 2px solid #3a4a5a;
+  font-weight: 600;
+}
+
+.ai-tools-table tr:nth-child(even),
+.ai-tips-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ai-tools-table tr:hover,
+.ai-tips-table tr:hover {
+  background: rgba(102, 204, 255, 0.08);
+}
+
+.ai-tools-table a,
+.ai-tips-table a {
+  color: #66ccff;
+  text-decoration: underline;
+  /* Keep break-all for potentially very long URLs without hyphens */
+  word-break: break-all;
+}
+
+/* Ensure colgroup is treated correctly for both tables */
+.ai-tools-table colgroup,
+.ai-tips-table colgroup {
+  display: table-column-group;
+}
+
+/* Nested ordered list in table cells for ai-tips-table (specific styling) */
+.ai-tips-table ol {
+  padding-left: 20px; /* Adjust as needed */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ai-tips-table ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Styling for strong tag within table cells - ensure it allows wrapping */
+.ai-tips-table td strong {
+    white-space: normal; /* Override any potential nowrap */
+    display: inline; /* Keep as inline to flow with text */
+    font-weight: bold; /* Ensure it stays bold */
+}
+
+/* Responsive Table: Stack on small screens for both tables */
+@media (max-width: 900px) {
+  /* General table responsiveness */
+  .ai-tools-table,
+  .ai-tips-table {
+    min-width: unset; /* Ensure it doesn't try to maintain desktop min-width */
+    width: 100%; /* Take full width on small screens */
+  }
+
+  .ai-tools-table,
+  .ai-tools-table thead,
+  .ai-tools-table tbody,
+  .ai-tools-table tr,
+  .ai-tips-table,
+  .ai-tips-table thead,
+  .ai-tips-table tbody,
+  .ai-tips-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-tools-table thead,
+  .ai-tips-table thead {
+    display: none;
+  }
+
+  .ai-tools-table tr,
+  .ai-tips-table tr {
+    margin-bottom: 1.2em;
+    border-bottom: 2px solid #222;
+    background: rgba(30, 40, 60, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 0.5em 0;
+  }
+
+  .ai-tools-table td,
+  .ai-tips-table td {
+    display: flex;
+    width: 100%;
+    border: none;
+    border-right: none;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    align-items: flex-start; /* Align content to the top */
+    /* Ensure content inside td can wrap without issues */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .ai-tools-table td:before,
+  .ai-tips-table td:before {
+    content: attr(data-label);
+    flex: 0 0 100px; /* Fixed width for the label */
+    color: #b5e0ff;
+    font-weight: 600;
+    margin-right: 1em;
+    font-size: 0.98em;
+    /* Ensure label doesn't wrap oddly if it's a long label.
+       No need for word-break here unless labels are multi-word and extremely long */
+    white-space: normal;
+  }
+}

@@ -47,73 +47,64 @@
         </p>
       </section>
 
-      <div class="two-column-flex" style="gap:2rem; align-items: flex-start;">
-        <section class="transparent-box" style="flex:1; min-width:300px;">
-          <h2>Prompt Engineering Secrets</h2>
-          <ol>
-            <li>
-              <strong>Give ChatGPT a role:</strong>
-              <br>
-              Assign the AI an identity or job title to prime it for more confident, structured, and relevant
-              responses.<br>
-              <em>Instead of:</em> “Tell me about marketing.”<br>
-              <em>Try:</em> “You are a world-class marketing strategist. What are three clever ways a small business
-              could grow on TikTok?”
-            </li>
-            <li>
-              <strong>Think step-by-step:</strong>
-              <br>
-              Use chain-of-thought prompting for multi-step tasks or logic puzzles.<br>
-              <em>Instead of:</em> “What’s the answer to this math problem?”<br>
-              <em>Try:</em> “Let’s solve this step by step.”
-            </li>
-            <li>
-              <strong>Set clear constraints:</strong>
-              <br>
-              Add rules and context to keep the model focused.<br>
-              <em>Instead of:</em> “I need three subject lines for a Mother’s Day sale”<br>
-              <em>Try:</em> “Give me three subject lines for a Mother’s Day sale — keep them under 50 characters and use
-              playful language.”
-            </li>
-            <li>
-              <strong>Break big tasks into smaller prompts:</strong>
-              <br>
-              Guide the AI step by step for more control and accuracy.<br>
-              <em>Example:</em>
-              <ol type="a">
-                <li>“Summarize this blog post.”</li>
-                <li>“Now rewrite that summary in a more casual tone.”</li>
-                <li>“Now turn it into an Instagram caption.”</li>
-              </ol>
-            </li>
-          </ol>
-        </section>
-        <section class="transparent-box" style="flex:1; min-width:300px;">
-          <h2>More Pro Tips</h2>
-          <ol start="5">
-            <li>
-              <strong>Show examples:</strong>
-              <br>
-              Give the model a sample tone or structure to mimic.<br>
-              <em>Example:</em> “Write a product description like this one: ‘These boots are made for adventure. Built
-              tough, but cozy enough for your lazy Sunday scrolls.’ Now write one for a travel backpack.”
-            </li>
-            <li>
-              <strong>Don’t be afraid to iterate:</strong>
-              <br>
-              Treat prompting like debugging code. Adjust and rerun until you get what you want.
-            </li>
-            <li>
-              <strong>Tell the chatbot how you want it to sound:</strong>
-              <br>
-              Specify the tone or style you want—warm, funny, professional, flirty, etc.<br>
-              <em>Instead of:</em> “Write a thank-you note.”<br>
-              <em>Try:</em> “Write a thank-you note that’s warm and funny, like something you’d text a close friend.”
-            </li>
-          </ol>
-        </section>
-      </div>
+      <section class="transparent-box" style="max-width: 900px; margin: 2rem auto; padding: 0.5rem 1rem;">
+        <h2 style="text-align: center;">Prompt Engineering Best Practices</h2>
+        <p style="text-align: center;">Master these techniques to get the most out of your AI interactions.</p>
 
+        <div style="overflow-x:auto;">
+          <table class="ai-tips-table">
+            <colgroup>
+              <col style="width: 25%;">
+              <col style="width: 35%;">
+              <col style="width: 40%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Tip Category</th>
+                <th>Description</th>
+                <th>Example/Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Tip Category"><strong>Assign a Role</strong></td>
+                <td data-label="Description">Give the AI an identity (e.g., "You are a marketing strategist") to prime it for more confident, structured, and relevant responses.</td>
+                <td data-label="Example/Impact"><strong>Instead of:</strong> "Tell me about marketing."<br><strong>Try:</strong> "You are a world-class marketing strategist. What are three clever ways a small business could grow on TikTok?"</td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Chain-of-Thought Prompting</strong></td>
+                <td data-label="Description">For multi-step tasks or logic puzzles, instruct the AI to "think step-by-step" or break down the process.</td>
+                <td data-label="Example/Impact"><strong>Instead of:</strong> "What’s the answer to this math problem?"<br><strong>Try:</strong> "Let’s solve this step by step: [math problem]"</td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Set Clear Constraints</strong></td>
+                <td data-label="Description">Add rules, context, and desired output formats (e.g., length, tone, keywords) to keep the model focused.</td>
+                <td data-label="Example/Impact"><strong>Instead of:</strong> "I need three subject lines for a Mother’s Day sale"<br><strong>Try:</strong> "Give me three subject lines for a Mother’s Day sale — keep them under 50 characters and use playful language."</td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Break Down Complex Tasks</strong></td>
+                <td data-label="Description">Guide the AI step by step for more control and accuracy, especially for lengthy or multifaceted requests.</td>
+                <td data-label="Example/Impact"><strong>Example:</strong><ol type="a"><li>"Summarize this blog post."</li><li>"Now rewrite that summary in a more casual tone."</li><li>"Now turn it into an Instagram caption."</li></ol></td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Provide Examples (Few-Shot)</strong></td>
+                <td data-label="Description">Give the model a sample tone, style, or structure to mimic, showing it exactly what you expect.</td>
+                <td data-label="Example/Impact"><strong>Example:</strong> "Write a product description like this one: ‘These boots are made for adventure. Built tough, but cozy enough for your lazy Sunday scrolls.’ Now write one for a travel backpack."</td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Iterate and Refine</strong></td>
+                <td data-label="Description">Treat prompting like debugging code. Adjust your prompt based on the AI's response and rerun until you get what you want.</td>
+                <td data-label="Example/Impact">Don't settle for the first output. If it's not quite right, provide specific feedback: "Make it shorter," "Use simpler language," or "Focus on benefits."</td>
+              </tr>
+              <tr>
+                <td data-label="Tip Category"><strong>Specify Tone/Style</strong></td>
+                <td data-label="Description">Explicitly state the desired tone or style (e.g., warm, funny, professional, formal) to guide the AI's language.</td>
+                <td data-label="Example/Impact"><strong>Instead of:</strong> "Write a thank-you note."<br><strong>Try:</strong> "Write a thank-you note that’s warm and funny, like something you’d text a close friend."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
       <section class="transparent-box" style="max-width: 800px; margin: 2rem auto;">
         <h2>The “3-Word Rule” for Expert-Level Responses</h2>
         <p>
@@ -255,7 +246,7 @@
       </section>
 
       <div style="text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
-          <a href="#top" style="color: #66ccff; text-decoration: underline;">Back to Top</a>
+        <a href="#top" style="color: #66ccff; text-decoration: underline;">Back to Top</a>
       </div>
       <footer style="text-align: center; margin-top: 2rem;">
         <p>Created by Cavin Krenik | 📧 <a href="mailto:cavinkrenik5@icloud.com">Contact Me</a></p>
@@ -265,7 +256,6 @@
 </body>
 
 </html>
-
 <!-- 
 
 8888888888 888    888      d8b                   888             d8888     8888888     
