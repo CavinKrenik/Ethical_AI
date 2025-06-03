@@ -21,3 +21,6 @@ Based on the feedback, the following changes have been made to the website:
 
 **Images on "Unethical Uses" Page (Addressing Maya Knight's feedback):**
     images have been added to pages/unethical.html to break up the text and enhance visual engagement, especially within the list-heavy sections.
+
+**Flash Cards**
+    prompt engineering tips and tricks
