@@ -43,7 +43,6 @@
                         understand the ethical implications of using AI in education and to use it responsibly.
                     </p>
                 </section>
-            </div>
 
             <div class="two-column-flex" style="flex-direction: column; align-items: center;">
                 <section class="transparent-box" style="max-width: 700px; text-align: left; margin-bottom: 2rem;">
@@ -71,7 +70,21 @@
                         </p>
                     </section>
                 </div>
-            </div>
+            </div>            /* Remove or comment out any blur filter or heavy opacity */
+            .background-overlay {
+              /* Remove filter: blur(...) or backdrop-filter: blur(...); */
+              /* Remove or set background: rgba(0,0,0,0.5); to a lower opacity or none */
+              background: none; /* or transparent */
+              /* filter: none; */
+              /* backdrop-filter: none; */
+            }
+            
+            /* If you want a slight dark overlay for readability, use a very low opacity: */
+            .transparent-box {
+              background: rgba(0,0,0,0.15); /* Lower the alpha for more background visibility */
+              /* Remove or reduce any blur here too */
+              /* backdrop-filter: none; */
+            }
                 <section class="transparent-box">
                     <h2>Welcome! 👋</h2>
                     <p>
