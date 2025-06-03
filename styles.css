@@ -10,12 +10,7 @@ body, html {
   color: white;
 }
 
-/* Overlay for readability */
-.background-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  min-height: 100vh;
-  padding: 20px;
-}
+
 
 /* Navbar styles */
 .navbar ul {
@@ -623,4 +618,20 @@ a:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Example: Apply Honk font to headings */
+h1, h2/* Remove or comment out any blur filter or heavy opacity */
+.background-overlay {
+  /* Remove filter: blur(...) or backdrop-filter: blur(...); */
+  /* Remove or set background: rgba(0,0,0,0.5); to a lower opacity or none */
+  background: none; /* or transparent */
+  /* filter: none; */
+  /* backdrop-filter: none; */
+}
+
+/* If you want a slight dark overlay for readability, use a very low opacity: */
+/* Example: To apply Honk font to headings, use: */
+h1, h2 {
+  font-family: 'Honk', cursive;
 }
