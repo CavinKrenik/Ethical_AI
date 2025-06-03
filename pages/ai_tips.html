@@ -30,206 +30,297 @@
     </header>
 
     <main>
-      <section class="transparent-box" style="max-width: 800px; margin: 0 auto 2rem auto;">
-        <h2>There's bad prompts, and then there's good prompts</h2>
-        <p>
-          If you’ve ever typed a question into ChatGPT and thought, “Huh. That’s not exactly what I wanted…” don't
-          worry, you’re not alone.
-        </p>
-        <p>
-          Most people are only scratching the surface of what AI chatbots can really do. But as someone who prompts AI
-          professionally, I can tell you the difference between a good result and a great one often comes down to the
-          way you ask.
-        </p>
-        <p>
-          Below are some of the best-kept secrets that prompt engineers use to unlock more helpful, creative, and
-          accurate responses from ChatGPT and other chatbots.
-        </p>
-      </section>
+      <div class="two-column-flex" style="max-width: 1000px; margin: 0 auto 2rem auto;">
+        <section class="transparent-box" style="flex: 1; min-width: 300px; margin: 0;">
+          <h2>There's bad prompts, and then there's good prompts</h2>
+          <p>
+            If you’ve ever typed a question into ChatGPT and thought, “Huh. That’s not exactly what I wanted…” don't
+            worry, you’re not alone.
+          </p>
+          <p>Below you will find some handy flashcards to learn about
+            prompt engineering, the art of crafting prompts that get you the best results from AI chatbots like ChatGPT.
+            Prompt engineering is the process of designing and refining prompts to elicit the most accurate, relevant, and
+            useful responses from AI models.
+          </p>
+          <p>
+            Most people are only scratching the surface of what AI chatbots can really do. But as someone who prompts AI
+            professionally, I can tell you the difference between a good result and a great one often comes down to the
+            way you ask.
+          </p>
+          <p>
+            Below are some of the best-kept secrets that prompt engineers use to unlock more helpful, creative, and
+            accurate responses from ChatGPT and other chatbots.
+          </p>
+        </section>
+        <section class="transparent-box" style="flex: 1; min-width: 250px; margin: 0; display: flex; justify-content: center; align-items: center;">
+          <img src="../un_ai_image/prompt.png" alt="Prompt Engineering Example" class="scalable-image" style="max-width: 350px;">
+        </section>
+      </div>
 
-      <section class="transparent-box" style="max-width: 900px; margin: 2rem auto; padding: 0.5rem 1rem;">
+      <section class="transparent-box flashcard-section" id="prompt-engineering-flashcards" style="max-width: 900px; margin: 2rem auto;">
         <h2 style="text-align: center;">Prompt Engineering Best Practices</h2>
         <p style="text-align: center;">Master these techniques to get the most out of your AI interactions.</p>
 
-        <div style="overflow-x:auto;">
-          <table class="ai-tips-table">
-            <colgroup>
-              <col style="width: 25%;">
-              <col style="width: 35%;">
-              <col style="width: 40%;">
-            </colgroup>
-            <thead>
-              <tr>
-                <th>Tip Category</th>
-                <th>Description</th>
-                <th>Example/Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Tip Category"><strong>Assign a Role</strong></td>
-                <td data-label="Description">Give the AI an identity (e.g., "You are a marketing strategist") to prime it for more confident, structured, and relevant responses.</td>
-                <td data-label="Example/Impact"><strong>Instead of:</strong> "Tell me about marketing."<br><strong>Try:</strong> "You are a world-class marketing strategist. What are three clever ways a small business could grow on TikTok?"</td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Chain-of-Thought Prompting</strong></td>
-                <td data-label="Description">For multi-step tasks or logic puzzles, instruct the AI to "think step-by-step" or break down the process.</td>
-                <td data-label="Example/Impact"><strong>Instead of:</strong> "What’s the answer to this math problem?"<br><strong>Try:</strong> "Let’s solve this step by step: [math problem]"</td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Set Clear Constraints</strong></td>
-                <td data-label="Description">Add rules, context, and desired output formats (e.g., length, tone, keywords) to keep the model focused.</td>
-                <td data-label="Example/Impact"><strong>Instead of:</strong> "I need three subject lines for a Mother’s Day sale"<br><strong>Try:</strong> "Give me three subject lines for a Mother’s Day sale — keep them under 50 characters and use playful language."</td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Break Down Complex Tasks</strong></td>
-                <td data-label="Description">Guide the AI step by step for more control and accuracy, especially for lengthy or multifaceted requests.</td>
-                <td data-label="Example/Impact"><strong>Example:</strong><ol type="a"><li>"Summarize this blog post."</li><li>"Now rewrite that summary in a more casual tone."</li><li>"Now turn it into an Instagram caption."</li></ol></td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Provide Examples (Few-Shot)</strong></td>
-                <td data-label="Description">Give the model a sample tone, style, or structure to mimic, showing it exactly what you expect.</td>
-                <td data-label="Example/Impact"><strong>Example:</strong> "Write a product description like this one: ‘These boots are made for adventure. Built tough, but cozy enough for your lazy Sunday scrolls.’ Now write one for a travel backpack."</td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Iterate and Refine</strong></td>
-                <td data-label="Description">Treat prompting like debugging code. Adjust your prompt based on the AI's response and rerun until you get what you want.</td>
-                <td data-label="Example/Impact">Don't settle for the first output. If it's not quite right, provide specific feedback: "Make it shorter," "Use simpler language," or "Focus on benefits."</td>
-              </tr>
-              <tr>
-                <td data-label="Tip Category"><strong>Specify Tone/Style</strong></td>
-                <td data-label="Description">Explicitly state the desired tone or style (e.g., warm, funny, professional, formal) to guide the AI's language.</td>
-                <td data-label="Example/Impact"><strong>Instead of:</strong> "Write a thank-you note."<br><strong>Try:</strong> "Write a thank-you note that’s warm and funny, like something you’d text a close friend."</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <h3>Assign a Role</h3>
+            <p>Give the AI an identity (e.g., "You are a marketing strategist") to prime it for more confident, structured, and relevant responses.</p>
+            <div class="example-row">
+              <strong>Instead of:</strong> "Tell me about marketing."<br>
+              <strong>Try:</strong> "You are a world-class marketing strategist. What are three clever ways a small business could grow on TikTok?"
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Chain-of-Thought Prompting</h3>
+            <p>For multi-step tasks or logic puzzles, instruct the AI to "think step-by-step" or break down the process.</p>
+            <div class="example-row">
+              <strong>Instead of:</strong> "What’s the answer to this math problem?"<br>
+              <strong>Try:</strong> "Let’s solve this step by step: [math problem]"
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Set Clear Constraints</h3>
+            <p>Add rules, context, and desired output formats (e.g., length, tone, keywords) to keep the model focused.</p>
+            <div class="example-row">
+              <strong>Instead of:</strong> "I need three subject lines for a Mother’s Day sale"<br>
+              <strong>Try:</strong> "Give me three subject lines for a Mother’s Day sale — keep them under 50 characters and use playful language."
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Break Down Complex Tasks</h3>
+            <p>Guide the AI step by step for more control and accuracy, especially for lengthy or multifaceted requests.</p>
+            <div class="example-row">
+              <strong>Example:</strong>
+              <ol type="a">
+                <li>"Summarize this blog post."</li>
+                <li>"Now rewrite that summary in a more casual tone."</li>
+                <li>"Now turn it into an Instagram caption."</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Provide Examples (Few-Shot)</h3>
+            <p>Give the model a sample tone, style, or structure to mimic, showing it exactly what you expect.</p>
+            <div class="example-row">
+              <strong>Example:</strong> "Write a product description like this one: ‘These boots are made for adventure. Built tough, but cozy enough for your lazy Sunday scrolls.’ Now write one for a travel backpack."
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Iterate and Refine</h3>
+            <p>Treat prompting like debugging code. Adjust your prompt based on the AI's response and rerun until you get what you want.</p>
+            <div class="example-row">
+              Don't settle for the first output. If it's not quite right, provide specific feedback: "Make it shorter," "Use simpler language," or "Focus on benefits."
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>Specify Tone/Style</h3>
+            <p>Explicitly state the desired tone or style (e.g., warm, funny, professional, formal) to guide the AI's language.</p>
+            <div class="example-row">
+              <strong>Instead of:</strong> "Write a thank-you note."<br>
+              <strong>Try:</strong> "Write a thank-you note that’s warm and funny, like something you’d text a close friend."
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-navigation">
+          <button id="promptPrevBtn">Back</button>
+          <button id="promptNextBtn">Next</button>
         </div>
       </section>
-      <section class="transparent-box" style="max-width: 800px; margin: 2rem auto;">
-        <h2>The “3-Word Rule” for Expert-Level Responses</h2>
-        <p>
-          Add three words, get better results. The “3-word rule” is a simple tweak that can take your chatbot from
-          surface-level answers to something that feels custom, thoughtful, and expert-level.
-        </p>
-        <h3>What is the 3-word rule?</h3>
-        <p>
-          Just add a short, three-word directive to your prompt that tells ChatGPT how to respond. These three words
-          instantly shape the tone, voice, and depth of the output.
-        </p>
-        <ul>
-          <li><strong>“Like a lawyer”</strong> — for structured, detailed, and logical responses</li>
-          <li><strong>“Be a teacher”</strong> — for simplified, clear, and educational explanations</li>
-          <li><strong>“Act like Hemingway”</strong> — for punchy, minimalist writing with impact</li>
-        </ul>
-        <p>
-          This works because ChatGPT has been trained on a massive variety of writing styles and professional voices.
-          When you give it a short cue—like “like a professor”—it taps into that persona and shifts its tone
-          accordingly.
-        </p>
-        <h3>Starter ideas:</h3>
-        <ul>
-          <li>“Summarize this article like a journalist”</li>
-          <li>“Explain dark matter like a professor”</li>
-          <li>“Give feedback like a mentor”</li>
-          <li>“Write a poem like a songwriter”</li>
-          <li>“Translate this message like a diplomat”</li>
-        </ul>
-        <p>
-          You can swap in almost any role or voice that fits your needs: CEO, therapist, designer, coach, teenager, or
-          just about anyone else. The more specific, the better.
-        </p>
-        <p>
-          The 3-word rule isn’t magic, but it’s close. It’s one of the easiest ways to upgrade your prompts and get
-          smarter, more human-like responses from AI.
-        </p>
+
+      <section class="transparent-box flashcard-section" id="three-word-rule-set" style="max-width: 900px; margin: 2rem auto;">
+        <h2 style="text-align: center;">The “3-Word Rule” & Advanced Prompting Techniques</h2>
+        <p style="text-align: center;">Explore powerful methods to get more precise and creative AI outputs.</p>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <h3>1. The “3-Word Rule”</h3>
+            <p>What it means:</p>
+            <p>Add a short 3-word directive to your prompt to instantly improve tone, voice, or depth.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“Like a lawyer” → structured & precise</li>
+                <li>“Be a teacher” → clear & instructional</li>
+                <li>“Act like Hemingway” → bold & minimal</li>
+              </ul>
+              <strong>Starter Prompts:</strong><br>
+              <ul>
+                <li>“Explain inflation like a professor”</li>
+                <li>“Summarize this like a journalist”</li>
+                <li>“Write a poem like a songwriter”</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>2. Role Play Your Prompt</h3>
+            <p>What it means:</p>
+            <p>Ask the AI to take on a persona to match your desired style or outcome.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“You are a startup advisor”</li>
+                <li>“Act as a nutrition coach”</li>
+                <li>“Respond as a 12-year-old”</li>
+              </ul>
+              <strong>Why it works:</strong> It frames the response with the right expertise, tone, or perspective.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>3. Give a Goal</h3>
+            <p>What it means:</p>
+            <p>Tell the AI exactly what you want to achieve.</p>
+            <div class="example-row">
+              <strong>Example Prompts:</strong><br>
+              <ul>
+                <li>“Help me prepare for a job interview”</li>
+                <li>“Write this email to boost sales”</li>
+                <li>“Make this paragraph sound more friendly”</li>
+              </ul>
+              <strong>Bonus Tip:</strong> Include the audience and intent.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>4. Show vs. Tell</h3>
+            <p>What it means:</p>
+            <p>Show the AI what you want with examples—it learns fast from patterns.</p>
+            <div class="example-row">
+              <strong>How to Use It:</strong><br>
+              <ul>
+                <li>Provide sample outputs</li>
+                <li>Use “Do it like this...”</li>
+                <li>Compare A vs. B styles in your prompt</li>
+              </ul>
+              <strong>Example:</strong> “Rewrite this paragraph to sound like this example below...”
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>5. Iterate, Don’t Expect Perfection</h3>
+            <p>What it means:</p>
+            <p>The first output is rarely the final one. Refine your prompt as you go.</p>
+            <div class="example-row">
+              <strong>How to Iterate:</strong><br>
+              <ul>
+                <li>“Make this more concise”</li>
+                <li>“Add humor to this”</li>
+                <li>“Use simpler words”</li>
+              </ul>
+              <strong>Tip:</strong> Treat AI like a creative partner—not a vending machine.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>6. Include Context Up Front</h3>
+            <p>What it means:</p>
+            <p>Start your prompt by giving background, so the AI knows what you're aiming for.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“I’m building a website for mental health awareness. Write a mission statement.”</li>
+                <li>“For a college audience unfamiliar with blockchain…”</li>
+              </ul>
+              <strong>Tip:</strong> The more you feed in, the more focused and useful the output becomes.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>7. Use Constraints to Focus Output</h3>
+            <p>What it means:</p>
+            <p>Guide the AI by setting specific limits like word count, tone, or format.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“In 100 words, explain quantum physics for beginners.”</li>
+                <li>“Use only bullet points.”</li>
+                <li>“Keep the tone casual and upbeat.”</li>
+              </ul>
+              <strong>Why it works:</strong> Constraints sharpen creativity and reduce generic fluff.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>8. Ask for Multiple Options</h3>
+            <p>What it means:</p>
+            <p>Prompt the AI to generate 2–3 versions so you can compare and choose.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“Give me 3 headline options for a fitness blog.”</li>
+                <li>“List 2 variations of this cold email, one funny and one formal.”</li>
+              </ul>
+              <strong>Bonus Tip:</strong> Combine the best elements from each result.
+            </div>
+          </div>
+
+          <div class="flashcard">
+            <h3>9. Use Follow-Up Prompts to Refine</h3>
+            <p>What it means:</p>
+            <p>Don’t restart—revise. Use the output as a base and prompt again to tweak it.</p>
+            <div class="example-row">
+              <strong>Examples:</strong><br>
+              <ul>
+                <li>“Can you make this more persuasive?”</li>
+                <li>“Now rewrite it at a 5th-grade reading level.”</li>
+                <li>“Add more emotion to this section.”</li>
+              </ul>
+              <strong>Why it matters:</strong> Follow-ups unlock higher-quality results without starting from scratch.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flashcard-navigation">
+          <button id="threeWordSetPrevBtn">Back</button>
+          <button id="threeWordSetNextBtn">Next</button>
+        </div>
       </section>
 
-      <section class="transparent-box" style="max-width: 900px; margin: 2rem auto;">
-        <h2>The Surprising Power of Politeness in Prompting AI</h2>
-        <div class="tips-grid">
-          <div class="tips-col">
-            <p>
-              When it comes to interacting with artificial intelligence, most people focus on the technical
-              aspects—being specific, adding context, or using structured formats. But there’s another, often-overlooked
-              technique that can make your AI conversations smoother, more helpful, and even more humanlike: basic
-              politeness.
-            </p>
-            <p>
-              Yes, you read that right. Saying “please” and “thank you” to an AI might seem unnecessary—after all, it’s
-              not conscious or emotionally aware. But in many cases, those simple words can actually improve the quality
-              of the responses you get. Here’s why.
-            </p>
+      <section class="transparent-box flashcard-section" id="politeness-flashcards" style="max-width: 900px; margin: 2rem auto;">
+        <h2 style="text-align: center;">The Surprising Power of Politeness in Prompting AI</h2>
+        <p style="text-align: center;">Beyond technical aspects, politeness can significantly enhance your AI interactions.</p>
+
+        <div class="flashcard-container">
+          <div class="flashcard">
+            <h3>Introduction to Politeness in AI</h3>
+            <p>When it comes to interacting with artificial intelligence, most people focus on the technical aspects—being specific, adding context, or using structured formats. But there’s another, often-overlooked technique that can make your AI conversations smoother, more helpful, and even more humanlike: basic politeness.</p>
+            <p>Yes, you read that right. Saying “please” and “thank you” to an AI might seem unnecessary—after all, it’s not conscious or emotionally aware. But in many cases, those simple words can actually improve the quality of the responses you get. Here’s why.</p>
+          </div>
+
+          <div class="flashcard">
             <h3>1. Politeness Guides Tone</h3>
-            <p>
-              AI language models are trained on massive amounts of text data, including conversations, articles,
-              instructions, and human interactions. When you say “please,” the AI picks up on that as a signal for a
-              certain tone—typically more helpful, less aggressive, and more service-oriented.
-            </p>
+            <p>AI language models are trained on massive amounts of text data, including conversations, articles, instructions, and human interactions. When you say “please,” the AI picks up on that as a signal for a certain tone—typically more helpful, less aggressive, and more service-oriented.</p>
             <div class="example-row">
               <strong>Without politeness:</strong> “Summarize this article.”<br>
               <strong>With politeness:</strong> “Could you please summarize this article for me?”
             </div>
-            <p>
-              The second version doesn’t just sound better—it often gets you a more thorough and friendlier response.
-              Why? Because you’re signaling that you want a helpful, service-minded reply, and the AI picks up on that
-              nuance.
-            </p>
+            <p>The second version doesn’t just sound better—it often gets you a more thorough and friendlier response. Why? Because you’re signaling that you want a helpful, service-minded reply, and the AI picks up on that nuance.</p>
+          </div>
+
+          <div class="flashcard">
             <h3>2. “Thank You” Signals Completion and Gratitude</h3>
-            <p>
-              While AI doesn’t feel appreciated, saying “thank you” helps signal the end of a task or query. This can
-              subtly affect follow-up responses, encouraging the AI to stay within the same polite tone or avoid
-              redundant explanations.
-            </p>
-            <p>
-              Even better, saying “thank you” models good behavior for any audience reading the exchange. In classrooms,
-              client interactions, or team environments, it reinforces digital etiquette and mutual respect—even when
-              the other party is artificial.
-            </p>
+            <p>While AI doesn’t feel appreciated, saying “thank you” helps signal the end of a task or query. This can subtly affect follow-up responses, encouraging the AI to stay within the same polite tone or avoid redundant explanations.</p>
+            <p>Even better, saying “thank you” models good behavior for any audience reading the exchange. In classrooms, client interactions, or team environments, it reinforces digital etiquette and mutual respect—even when the other party is artificial.</p>
+          </div>
+
+          <div class="flashcard">
             <h3>3. Politeness = Better Role Simulation</h3>
-            <p>
-              If you’re using role prompting (e.g., “Act like a friendly tutor”), politeness naturally supports the tone
-              you want. A polite user often gets a polite AI—like a mirror reflecting your attitude.
-            </p>
+            <p>If you’re using role prompting (e.g., “Act like a friendly tutor”), politeness naturally supports the tone you want. A polite user often gets a polite AI—like a mirror reflecting your attitude.</p>
           </div>
-          <div class="tips-col">
-            <p>
-              When users get abrupt or overly dry answers from AI, it’s often because the prompt was just as blunt. Try
-              using polite phrasing and see how much more “human” the chatbot starts to sound.
-            </p>
-            <h3>4. It’s Low Effort, High Reward</h3>
-            <p>
-              Adding a “please” or “thank you” costs you nothing—but it can subtly steer the AI toward better responses.
-              In some cases, it can even help the model disambiguate your intent or handle your request more gracefully.
-            </p>
-            <p>
-              It also helps when working with long prompts or complex instructions. A sentence like “Please rewrite this
-              paragraph with a more confident tone” sounds clearer—and yields better results—than “Rewrite this
-              paragraph confident.”
-            </p>
-            <h3>5. You Set the Cultural Tone</h3>
-            <p>
-              If you’re using AI in a shared space—like a classroom, business, or collaborative project—your tone
-              matters. By modeling politeness, you help establish a culture where respectful, constructive interaction
-              is the norm—even with machines.
-            </p>
-            <p>
-              It’s especially important for younger users, who are learning how to navigate digital environments and
-              build healthy tech habits. Saying “please” to AI might not change the machine—but it definitely shapes the
-              human.
-            </p>
-            <div class="final-thoughts">
-              <h3>More Than Just Manners</h3>
-              <p>
-                Saying “please” and “thank you” to an AI isn’t about tricking the system—it’s about communicating with
-                intention. These words give your prompt tone, clarity, and direction. They help you shape not just what
-                the AI says, but how it says it.
-              </p>
-              <p>
-                And who knows? As AI gets more embedded into our daily lives, the habit of being polite to our digital
-                assistants might just make our human conversations a little kinder too.
-              </p>
-            </div>
-          </div>
+        </div>
+
+        <div class="flashcard-navigation">
+          <button id="politenessPrevBtn">Back</button>
+          <button id="politenessNextBtn">Next</button>
         </div>
       </section>
 
@@ -253,6 +344,55 @@
       </footer>
     </main>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function setupFlashcards(sectionId, prevBtnId, nextBtnId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return; // Exit if section not found
+
+        const flashcardsContainer = section.querySelector('.flashcard-container');
+        const flashcards = flashcardsContainer ? flashcardsContainer.querySelectorAll('.flashcard') : [];
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+        let currentIndex = 0;
+
+        if (flashcards.length === 0 || !prevBtn || !nextBtn) return; // Ensure all elements exist
+
+        function showCard(index) {
+          flashcards.forEach((card, i) => {
+            card.style.display = (i === index) ? 'block' : 'none';
+          });
+        }
+
+        function nextCard() {
+          currentIndex = (currentIndex + 1) % flashcards.length;
+          showCard(currentIndex);
+        }
+
+        function prevCard() {
+          currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
+          showCard(currentIndex);
+        }
+
+        // Initial display
+        showCard(currentIndex);
+
+        // Event Listeners
+        nextBtn.addEventListener('click', nextCard);
+        prevBtn.addEventListener('click', prevCard);
+      }
+
+      // Setup for Prompt Engineering Best Practices Flashcards (original 7 tips)
+      setupFlashcards('prompt-engineering-flashcards', 'promptPrevBtn', 'promptNextBtn');
+
+      // Setup for The “3-Word Rule” & Advanced Prompting Techniques Flashcards (your 9 new tips)
+      setupFlashcards('three-word-rule-set', 'threeWordSetPrevBtn', 'threeWordSetNextBtn');
+
+      // Setup for Politeness Flashcards (original politeness content)
+      setupFlashcards('politeness-flashcards', 'politenessPrevBtn', 'politenessNextBtn');
+    });
+  </script>
 </body>
 
 </html>
