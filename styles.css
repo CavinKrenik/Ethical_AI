@@ -10,7 +10,9 @@ body, html {
   color: white;
 }
 
-
+body {
+  cursor: url('orange.cur'), auto;
+}
 
 /* Navbar styles */
 .navbar ul {
