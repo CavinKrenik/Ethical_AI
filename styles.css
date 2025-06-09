@@ -5,7 +5,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('images/bkg.gif') no-repeat center center fixed;
+  background: url('images/bkg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #13cde9;
   font-weight: bold;
