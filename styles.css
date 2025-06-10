@@ -5,7 +5,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('images/bkg.jpg') no-repeat center center fixed;
+  background: url('images/bkg.gif') no-repeat center center fixed;
   background-size: cover;
   color: #13cde9;
   font-weight: bold;
@@ -588,12 +588,12 @@ a:hover {
 }
 
 .flashcard .example-row {
-  background: rgba(255, 255, 255, 0.08); /* Slightly more prominent for examples */
+  background: rgba(157, 149, 149, 0.851); /* Slightly more prominent for examples */
   border-radius: 8px;
   padding: 1em 1.2em;
   margin-top: 1.5em;
   font-size: 0.95em;
-  color: #e0e0e0;
+  color: #1a0e0e;
 }
 
 .flashcard-navigation {
@@ -640,4 +640,92 @@ h1, h2/* Remove or comment out any blur filter or heavy opacity */
 /* Example: To apply Honk font to headings, use: */
 h1, h2 {
   font-family: 'Honk', cursive;
+}
+
+/* Styles for the AI Tool Rolodex */
+body {
+    /* Existing body styles in styles.css will apply,
+       but override background-color with the one from the rolodex if desired. */
+    background-color: #831ee745; /* Light gray background for the overall page */
+    font-family: 'Inter', sans-serif; /* Ensure Inter font is used for rolodex content */
+}
+
+/* Styles for tab buttons */
+.tab-button.active {
+    background-color: #dcef13; /* Blue-700 */
+    color: #eb0c96df; /* White text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* Styles for individual tool cards */
+.tool-card {
+    background-color: #0909033a;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.323);
+    transition: transform 0.2s ease-in-out;
+}
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(253, 7, 240, 0.426);
+}
+
+/* Styles for the "Try Now" button */
+.try-now-button {
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    display: inline-flex; /* To ensure padding and alignment are correct for anchor tag */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text wrap */
+}
+.try-now-button:hover {
+    background-color: #fb0fc8; /* Blue-500 */
+    transform: scale(1.02);
+}
+.try-now-button:active {
+    background-color: #fb08b6; /* Blue-700 */
+    transform: scale(0.98);
+}
+
+/* Message box for  "Try Now" but kept for consistency) */
+.message-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: rgba(52, 13, 228, 0.712);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+.message-box.show {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tab-button {
+        margin: 0.5rem 0.25rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    .rolodex-container {
+        padding: 1rem;
+    }
 }
