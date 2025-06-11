@@ -2,183 +2,240 @@
 
 /* Reset and base styles */
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('images/bkg.gif') no-repeat center center fixed;
-  background-size: cover;
-  color: #13cde9;
-  font-weight: bold;
-  text-shadow: 2px 2px 6px #e409ad, 0 1px 0 rgba(171, 13, 147, 0.912);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/bkg.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #13cde9;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px #e409ad, 0 1px 0 rgba(171, 13, 147, 0.912);
 }
 
 body {
-  cursor: url('orange.cur'), auto;
+    cursor: url('orange.cur'), auto;
 }
 
 /* Navbar styles */
 .navbar ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(23, 20, 20, 0.937);
-  margin-bottom: 40px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(23, 20, 20, 0.937);
+    margin-bottom: 40px;
 }
 
 .navbar a {
-  color: rgb(70, 222, 230);
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
+    color: rgb(70, 222, 230);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
 }
 
 .navbar a:hover {
-  background-color: rgba(214, 233, 7, 0.277);
-  border-radius: 5px;
+    background-color: rgba(214, 233, 7, 0.277);
+    border-radius: 5px;
 }
+
+/* Jump-to Navigation styles */
+.jump-nav {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 900px;
+    background-color: rgba(10, 10, 10, 0.85); /* Matches transparent-box background */
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.jump-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.jump-nav li {
+    margin: 0 15px;
+}
+
+.jump-nav a {
+    color: #66ccff; /* Bright blue for visibility */
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.jump-nav a:hover {
+    background-color: rgba(102, 204, 255, 0.15);
+    color: #a0dfff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .jump-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .jump-nav li {
+        margin: 5px 0;
+        width: 90%; /* Take up more width */
+    }
+    .jump-nav a {
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+
 
 /* Header styles */
 header {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .tagline {
-  font-size: 1.2em;
-  color: #dae913;
-  font-weight: bold;
-  text-shadow: 2px 2px 6px #e409ad, 0 1px 0 rgba(171, 13, 147, 0.912);
+    font-size: 1.2em;
+    color: #dae913;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px #e409ad, 0 1px 0 rgba(171, 13, 147, 0.912);
 }
 
 /* Transparent content boxes */
 .transparent-box {
-  background: rgba(10,10,10,0.85);
-  color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
-  padding: 2rem 2.5rem;
-  margin: 1.5rem auto; /* Centered margin for all transparent-boxes */
-  max-width: 600px;
-  width: 100%;
-  text-align: left;
-  box-sizing: border-box;
-  word-break: break-word; /* Using break-word for general transparent box content */
-  overflow-wrap: break-word;
+    background: rgba(10,10,10,0.85);
+    color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    padding: 2rem 2.5rem;
+    margin: 1.5rem auto; /* Centered margin for all transparent-boxes */
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    word-break: break-word; /* Using break-word for general transparent box content */
+    overflow-wrap: break-word;
 }
 
 /* Responsive: Reduce padding and font size on smaller screens */
 @media (max-width: 900px) {
-  .transparent-box {
-    max-width: 95vw;
-    padding: 1.2rem 1rem;
-    font-size: 1rem;
-  }
+    .transparent-box {
+        max-width: 95vw;
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 600px) {
-  .transparent-box {
-    padding: 0.7rem 0.3rem;
-    font-size: 0.97rem;
-  }
+    .transparent-box {
+        padding: 0.7rem 0.3rem;
+        font-size: 0.97rem;
+    }
 }
 
 /* Columns layout */
 .columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .columns > div {
-  flex: 1;
-  min-width: 250px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
 }
 
 /* AI Columns layout */
 .ai-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .ai-columns ul {
-  flex: 1 1 350px;
-  min-width: 300px;
-  max-width: 500px;
-  list-style: disc inside;
-  padding: 0 1rem;
-  color: #fff;
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 500px;
+    list-style: disc inside;
+    padding: 0 1rem;
+    color: #fff;
 }
 
 .ai-columns li {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 /* Footer styles */
 footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #aaa;
+    margin-top: 40px;
+    text-align: center;
+    color: #aaa;
 }
 
 /* General link color for better visibility */
 a {
-  color: #66ccff; /* A brighter blue for better contrast */
-  text-decoration: none;
+    color: #66ccff; /* A brighter blue for better contrast */
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Centered heading style */
 .center-heading {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 /* Two column flexbox layout */
 .two-column-flex {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* Make sure flex containers stack vertically on small screens */
 @media (max-width: 900px) {
-  .two-column-flex {
-    flex-direction: column;
-    align-items: center;
-  }
+    .two-column-flex {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Avatar flexbox layout */
 .avatar-flex-row {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .avatar-flex-row .transparent-box {
-  min-width: 280px;
-  max-width: 500px;
-  width: 100%;
-  margin-bottom: 2rem;
+    min-width: 280px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 /* Scalable image that fits nicely in a flexbox */
 .scalable-image {
-    max-width: 350px;   /* or another value like 300px */
+    max-width: 350px;    /* or another value like 300px */
     width: 100%;
     height: auto;
     display: block;
@@ -188,73 +245,73 @@ a:hover {
 
 /* Responsive breakpoints */
 @media screen and (max-width: 768px) {
-  .columns {
-    flex-direction: column;
-  }
+    .columns {
+        flex-direction: column;
+    }
 }
 
 /* Modified nav bar media query */
 @media screen and (max-width: 600px) { /* Changed from 480px to 600px */
-  .navbar ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 0; /* Ensure no extra padding causes overflow */
-    margin: 0; /* Ensure no extra margin causes overflow */
-  }
-  .navbar a {
-    padding: 8px 10px; /* Slightly less padding for vertical items */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
-  }
-  .navbar li:last-child a {
-    border-bottom: none; /* No separator for the last item */
-  }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0; /* Ensure no extra padding causes overflow */
+        margin: 0; /* Ensure no extra margin causes overflow */
+    }
+    .navbar a {
+        padding: 8px 10px; /* Slightly less padding for vertical items */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+    }
+    .navbar li:last-child a {
+        border-bottom: none; /* No separator for the last item */
+    }
 }
 
 /* Responsive: stack columns on small screens */
 @media (max-width: 900px) {
-  .ai-columns {
-    flex-direction: column;
-    align-items: center;
-  }
-  .ai-columns ul {
-    max-width: 600px;
-  }
-  .avatar-flex-row {
-    flex-direction: column;
-    align-items: center;
-  }
+    .ai-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ai-columns ul {
+        max-width: 600px;
+    }
+    .avatar-flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 1100px) {
-  .two-column-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-  .transparent-box {
-    max-width: 95vw;
-  }
+    .two-column-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .transparent-box {
+        max-width: 95vw;
+    }
 }
 
 .transparent-box h2 {
-  margin-top: 0; /* Good practice if it's the first element */
+    margin-top: 0; /* Good practice if it's the first element */
 }
 
 /* Styling for the "Key Insights You'll Gain Here" list */
 .transparent-box ul {
-  list-style-type: none; /* Removes default bullets if you prefer custom styling */
-  padding-left: 0; /* Removes default padding */
+    list-style-type: none; /* Removes default bullets if you prefer custom styling */
+    padding-left: 0; /* Removes default padding */
 }
 
 .transparent-box ul li {
-  margin-bottom: 15px; /* Space between list items */
-  padding-left: 25px; /* Indent text if using a custom bullet or background icon */
-  position: relative; /* Useful for custom bullets */
-  line-height: 1.6;
+    margin-bottom: 15px; /* Space between list items */
+    padding-left: 25px; /* Indent text if using a custom bullet or background icon */
+    position: relative; /* Useful for custom bullets */
+    line-height: 1.6;
 }
 
 /* Optional: Custom bullets for the "Key Insights" list */
 /* .transparent-box ul li::before {
-   content: '⭐'; /* Or any other icon/emoji/image */
+    content: '⭐'; /* Or any other icon/emoji/image */
 /* position: absolute; */
 /* left: 0; */
 /* color: #007bff; */ /* Example color */
@@ -262,390 +319,417 @@ a:hover {
 
 /* Styling for "Explore Our Core Topics" section */
 .topic-links {
-  display: grid; /* Using grid for a flexible layout */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Space between topic items */
-  margin-top: 20px;
+    display: grid; /* Using grid for a flexible layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between topic items */
+    margin-top: 20px;
 }
 
 .topic-link-item {
-  background-color: rgba(0, 0, 0, 0.05); /* Slightly different background for items */
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.1);
-  transition: none; /* Remove transform 0.3s ease, box-shadow 0.3s ease; */
+    background-color: rgba(0, 0, 0, 0.05); /* Slightly different background for items */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: none; /* Remove transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .topic-link-item:hover {
-  transform: none; /* Remove transform on hover */
-  box-shadow: none; /* Remove box-shadow on hover */
+    transform: none; /* Remove transform on hover */
+    box-shadow: none; /* Remove box-shadow on hover */
 }
 
 .topic-link-item h3 {
-  margin-top: 0;
-  /* color: #0056b3; Example color for topic titles - removed to allow general 'a' rule to apply */
+    margin-top: 0;
+    /* color: #0056b3; Example color for topic titles - removed to allow general 'a' rule to apply */
 }
 
 .topic-link-item h3 a {
-  text-decoration: none;
-  color: inherit; /* Inherits color from h3 */
+    text-decoration: none;
+    color: inherit; /* Inherits color from h3 */
 }
 
 .topic-link-item h3 a:hover {
-  text-decoration: underline;
-  color: #a0dfff; /* A slightly lighter blue for emphasis */
+    text-decoration: underline;
+    color: #a0dfff; /* A slightly lighter blue for emphasis */
 }
 
 .topic-link-item p {
-  font-size: 0.95em;
-  color: #f5f4f4;
-  line-height: 1.5;
+    font-size: 0.95em;
+    color: #f5f4f4;
+    line-height: 1.5;
 }
 
 /* Responsive adjustments for topic links if needed */
 @media (max-width: 600px) {
-  .topic-links {
-    grid-template-columns: 1fr; /* Stack items on smaller screens */
-  }
+    .topic-links {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
 }
 
 /* Gallery container: stacks image rows vertically */
 .gallery-container {
-  display: grid; /* You can use grid or flex here */
-  gap: 24px;
-  width: 100%;
-  margin: 2rem 0;
+    display: grid; /* You can use grid or flex here */
+    gap: 24px;
+    width: 100%;
+    margin: 2rem 0;
 }
 
 /* Each image row: horizontal scroll with flexbox */
 .image-row {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: hidden; /* Hide scrollbar for continuous scroll */
-  padding: 10px 0;
-  background: #fff;
-  border-radius: 8px;
-  gap: 12px;
-  /* Remove scrollbars for a cleaner look */
-  scrollbar-width: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* Hide scrollbar for continuous scroll */
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 8px;
+    gap: 12px;
+    /* Remove scrollbars for a cleaner look */
+    scrollbar-width: none;
 }
 .image-row::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Style for individual images */
 .image-row img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-  background: #eee;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: #eee;
 }
 .image-row img:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 
 /* AI Tips Page: Functional columns/rows for prompt tips and politeness section */
 .tips-grid {
-  /* Flex container for columns: used for prompt tips and politeness sections */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem; /* Space between columns */
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 2rem;
+    /* Flex container for columns: used for prompt tips and politeness sections */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between columns */
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .tips-col {
-  /* Each column in the tips grid */
-  flex: 1 1 340px;
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem; /* Space between items in a column */
+    /* Each column in the tips grid */
+    flex: 1 1 340px;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Space between items in a column */
 }
 
 /* Responsive: stack columns vertically on smaller screens */
 @media (max-width: 900px) {
-  .tips-grid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .tips-col {
-    max-width: 100%;
-  }
+    .tips-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .tips-col {
+        max-width: 100%;
+    }
 }
 
 /* Example row: used for contrasting prompt examples in tips */
 .example-row {
-  background: rgba(255,255,255,0.04); /* Subtle highlight */
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
+    background: rgba(255,255,255,0.04); /* Subtle highlight */
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
 /* Final thoughts section styling for AI Tips page */
 .final-thoughts {
-  margin-top: 2rem;
-  text-align: left;
+    margin-top: 2rem;
+    text-align: left;
 }
 
-/* --- AI Tables Styles (General for both ai-tools-table and ai-tips-table) --- */
-.ai-tools-table,
-.ai-tips-table { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  width: 98%; /* Keep it within 98% of its parent for small margins */
-  min-width: unset; /* Remove fixed min-width to allow shrinking below 700px */
-  max-width: 1200px;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 1.5rem auto;
-  font-size: 1.05rem;
-  background: rgba(30, 40, 60, 0.98);
-  border-radius: 10px;
-  /* Removed overflow: hidden from here, as the parent div handles it */
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
-  table-layout: fixed; /* This is crucial: ensures columns have a fixed width */
+/* --- AI Tools Table Styles (General for both ai-tools-table and ai-ambassadors-table) --- */
+/* The .ai-tips-table is no longer used, so removed its specific rules */
+.ai-tools-table {
+    width: 98%; /* Keep it within 98% of its parent for small margins */
+    min-width: unset; /* Remove fixed min-width to allow shrinking below 700px */
+    max-width: 1200px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem auto;
+    font-size: 1.05rem;
+    background: rgba(30, 40, 60, 0.98);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    table-layout: fixed; /* This is crucial: ensures columns have a fixed width */
 }
 
 .ai-tools-table th,
-.ai-tools-table td,
-.ai-tips-table th, /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-.ai-tips-table td { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  padding: 0.7em 1em;
-  text-align: left;
-  border-right: 2px solid #111; /* vertical black lines */
-  /* Using overflow-wrap for better word breaking, removing aggressive word-break: break-all; */
-  overflow-wrap: break-word;
-  word-wrap: break-word; /* Older browser fallback */
+.ai-tools-table td {
+    padding: 0.7em 1em;
+    text-align: left;
+    border-right: 2px solid #111; /* vertical black lines */
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Older browser fallback */
 }
 
 .ai-tools-table th:last-child,
-.ai-tools-table td:last-child,
-.ai-tips-table th:last-child, /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-.ai-tips-table td:last-child { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  border-right: none;
-}
-
-.ai-tools-table th,
-.ai-tips-table th { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  background: #223344;
-  color: #b5e0ff;
-  border-bottom: 2px solid #3a4a5a;
-  font-weight: 600;
-}
-
-.ai-tools-table tr:nth-child(even),
-.ai-tips-table tr:nth-child(even) { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.ai-tools-table tr:hover,
-.ai-tips-table tr:hover { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  background: rgba(102, 204, 255, 0.08);
-}
-
-.ai-tools-table a,
-.ai-tips-table a { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  color: #66ccff;
-  text-decoration: underline;
-  /* Keep break-all for potentially very long URLs without hyphens */
-  word-break: break-all;
-}
-
-/* Ensure colgroup is treated correctly for both tables */
-.ai-tools-table colgroup,
-.ai-tips-table colgroup { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  display: table-column-group;
-}
-
-/* Nested ordered list in table cells for ai-tips-table (specific styling) */
-.ai-tips-table ol { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  padding-left: 20px; /* Adjust as needed */
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.ai-tips-table ol li { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  margin-bottom: 0.5em;
-}
-
-/* Styling for strong tag within table cells - ensure it allows wrapping */
-.ai-tips-table td strong { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    white-space: normal; /* Override any potential nowrap */
-    display: inline; /* Keep as inline to flow with text */
-    font-weight: bold; /* Ensure it stays bold */
-}
-
-/* Responsive Table: Stack on small screens for both tables */
-@media (max-width: 900px) {
-  /* General table responsiveness */
-  .ai-tools-table,
-  .ai-tips-table { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    min-width: unset; /* Ensure it doesn't try to maintain desktop min-width */
-    width: 100%; /* Take full width on small screens */
-  }
-
-  .ai-tools-table,
-  .ai-tools-table thead,
-  .ai-tools-table tbody,
-  .ai-tools-table tr,
-  .ai-tips-table, /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  .ai-tips-table thead, /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  .ai-tips-table tbody, /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-  .ai-tips-table tr { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    display: block;
-    width: 100%;
-  }
-
-  .ai-tools-table thead,
-  .ai-tips-table thead { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    display: none;
-  }
-
-  .ai-tools-table tr,
-  .ai-tips-table tr { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    margin-bottom: 1.2em;
-    border-bottom: 2px solid #222;
-    background: rgba(30, 40, 60, 0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    padding: 0.5em 0;
-  }
-
-  .ai-tools-table td,
-  .ai-tips-table td { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    display: flex;
-    width: 100%;
-    border: none;
+.ai-tools-table td:last-child {
     border-right: none;
-    padding: 0.6em 1em;
-    font-size: 1em;
-    align-items: flex-start; /* Align content to the top */
-    /* Ensure content inside td can wrap without issues */
+}
+
+.ai-tools-table th {
+    background: #223344;
+    color: #b5e0ff;
+    border-bottom: 2px solid #3a4a5a;
+    font-weight: 600;
+}
+
+.ai-tools-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.ai-tools-table tr:hover {
+    background: rgba(102, 204, 255, 0.08);
+}
+
+.ai-tools-table a {
+    color: #66ccff;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+/* Ensure colgroup is treated correctly for tables */
+.ai-tools-table colgroup {
+    display: table-column-group;
+}
+
+/* Specific styles for the AI Ambassadors Table */
+.ai-ambassadors-table {
+    width: 98%;
+    min-width: 340px; /* Kept from your original inline style */
+    max-width: 900px; /* Kept from your original inline style */
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem auto;
+    font-size: 1.05rem;
+    background: rgba(30, 40, 60, 0.98);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    table-layout: fixed;
+}
+
+.ai-ambassadors-table th,
+.ai-ambassadors-table td {
+    padding: 0.7em 1em;
+    text-align: left;
+    border-right: 2px solid #111;
     overflow-wrap: break-word;
     word-wrap: break-word;
-  }
-
-  .ai-tools-table td:before,
-  .ai-tips-table td:before { /* .ai-tips-table is no longer used but keeping this rule as it's grouped with ai-tools-table */
-    content: attr(data-label);
-    flex: 0 0 100px; /* Fixed width for the label */
-    color: #b5e0ff;
-    font-weight: 600;
-    margin-right: 1em;
-    font-size: 0.98em;
-    /* Ensure label doesn't wrap oddly if it's a long label.
-       No need for word-break here unless labels are multi-word and extremely long */
-    white-space: normal;
-  }
 }
+
+.ai-ambassadors-table th:last-child,
+.ai-ambassadors-table td:last-child {
+    border-right: none;
+}
+
+.ai-ambassadors-table thead th {
+    background: #223344;
+    color: #b5e0ff;
+    border-bottom: 2px solid #3a4a5a;
+    font-weight: 600;
+}
+
+.ai-ambassadors-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.ai-ambassadors-table tbody tr:hover {
+    background: rgba(102, 204, 255, 0.08);
+}
+
+.ai-ambassadors-table a {
+    color: #66ccff;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+/* Category header rows for AI Ambassadors table */
+.ai-ambassadors-table .category-header td {
+    background: #4a5a6a; /* A slightly darker background for category headers */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8em 1em;
+    border-right: none; /* No vertical lines on category headers */
+    border-bottom: 2px solid #3a4a5a;
+    border-top: 2px solid #3a4a5a;
+    position: sticky; /* Make headers sticky for better scrolling experience */
+    top: 0; /* Stick to the top of the container */
+    z-index: 10; /* Ensure it stays above other table content */
+}
+
+/* Responsive Table for both AI Tools and AI Ambassadors */
+@media (max-width: 900px) {
+    .ai-tools-table,
+    .ai-ambassadors-table {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .ai-tools-table thead,
+    .ai-ambassadors-table thead {
+        display: none;
+    }
+
+    .ai-tools-table tr,
+    .ai-ambassadors-table tr {
+        margin-bottom: 1.2em;
+        border-bottom: 2px solid #222;
+        background: rgba(30, 40, 60, 0.98);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        padding: 0.5em 0;
+        display: block; /* Make rows behave as blocks for stacking */
+        width: 100%; /* Take full width */
+    }
+
+    .ai-ambassadors-table .category-header td {
+        border-radius: 8px 8px 0 0; /* Rounded top corners for category headers */
+        margin-bottom: 0; /* Remove margin-bottom from category headers in mobile */
+    }
+
+    .ai-tools-table td,
+    .ai-ambassadors-table td {
+        display: flex;
+        width: 100%;
+        border: none;
+        border-right: none;
+        padding: 0.6em 1em;
+        font-size: 1em;
+        align-items: flex-start;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .ai-tools-table td:before,
+    .ai-ambassadors-table td:before {
+        content: attr(data-label);
+        flex: 0 0 100px;
+        color: #b5e0ff;
+        font-weight: 600;
+        margin-right: 1em;
+        font-size: 0.98em;
+        white-space: normal;
+    }
+}
+
 
 /* Flashcard Specific Styles */
 .flashcard-section {
-  padding: 2.5rem; /* Ensure sufficient padding for the flashcard content */
+    padding: 2.5rem; /* Ensure sufficient padding for the flashcard content */
 }
 
 .flashcard-container {
-  position: relative;
-  width: 100%;
-  min-height: 300px; /* Adjust as needed based on content height */
-  margin: 2rem auto;
-  border-radius: 1rem;
-  overflow: hidden; /* Ensures content doesn't spill out */
-  background: rgba(10, 10, 10, 0.85); /* Matches transparent-box background */
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-  display: flex; /* Use flex to center the flashcards */
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 300px; /* Adjust as needed based on content height */
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden; /* Ensures content doesn't spill out */
+    background: rgba(10, 10, 10, 0.85); /* Matches transparent-box background */
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    display: flex; /* Use flex to center the flashcards */
+    justify-content: center;
+    align-items: center;
 }
 
 .flashcard {
-  width: 90%; /* Take up most of the container width */
-  max-width: 700px; /* Limit max width for readability */
-  padding: 1.5rem;
-  box-sizing: border-box;
-  text-align: left;
-  display: none; /* Hidden by default, JavaScript controls visibility */
-  animation: fadeIn 0.5s ease-out; /* Optional: subtle fade in effect */
+    width: 90%; /* Take up most of the container width */
+    max-width: 700px; /* Limit max width for readability */
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: left;
+    display: none; /* Hidden by default, JavaScript controls visibility */
+    animation: fadeIn 0.5s ease-out; /* Optional: subtle fade in effect */
 }
 
 .flashcard h3 {
-  color: #66ccff;
-  margin-top: 0;
-  margin-bottom: 1em;
-  font-size: 1.5em;
-  text-align: center; /* Center flashcard titles */
+    color: #66ccff;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    text-align: center; /* Center flashcard titles */
 }
 
 .flashcard p {
-  font-size: 1em;
-  line-height: 1.7;
-  margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 1em;
 }
 
 .flashcard .example-row {
-  background: rgba(157, 149, 149, 0.851); /* Slightly more prominent for examples */
-  border-radius: 8px;
-  padding: 1em 1.2em;
-  margin-top: 1.5em;
-  font-size: 0.95em;
-  color: #1a0e0e;
+    background: rgba(157, 149, 149, 0.851); /* Slightly more prominent for examples */
+    border-radius: 8px;
+    padding: 1em 1.2em;
+    margin-top: 1.5em;
+    font-size: 0.95em;
+    color: #1a0e0e;
 }
 
 .flashcard-navigation {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
 }
 
 .flashcard-navigation button {
-  background-color: #66ccff; /* Bright blue button */
-  color: #000; /* Dark text for contrast */
-  border: none;
-  padding: 10px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #66ccff; /* Bright blue button */
+    color: #000; /* Dark text for contrast */
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .flashcard-navigation button:hover {
-  background-color: #a0dfff; /* Lighter blue on hover */
-  transform: translateY(-2px);
+    background-color: #a0dfff; /* Lighter blue on hover */
+    transform: translateY(-2px);
 }
 
 /* Optional: Fade in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Example: Apply Honk font to headings */
 h1, h2/* Remove or comment out any blur filter or heavy opacity */
 .background-overlay {
-  /* Remove filter: blur(...) or backdrop-filter: blur(...); */
-  /* Remove or set background: rgba(0,0,0,0.5); to a lower opacity or none */
-  background: none; /* or transparent */
-  /* filter: none; */
-  /* backdrop-filter: none; */
+    /* Remove filter: blur(...) or backdrop-filter: blur(...); */
+    /* Remove or set background: rgba(0,0,0,0.5); to a lower opacity or none */
+    background: none; /* or transparent */
+    /* filter: none; */
+    /* backdrop-filter: none; */
 }
 
 /* If you want a slight dark overlay for readability, use a very low opacity: */
 /* Example: To apply Honk font to headings, use: */
 h1, h2 {
-  font-family: 'Honk', cursive;
+    font-family: 'Honk', cursive;
 }
 
 /* Styles for the AI Tool Rolodex */
 body {
     /* Existing body styles in styles.css will apply,
-       but override background-color with the one from the rolodex if desired. */
+        but override background-color with the one from the rolodex if desired. */
     background-color: #831ee745; /* Light gray background for the overall page */
     font-family: 'Inter', sans-serif; /* Ensure Inter font is used for rolodex content */
 }
@@ -695,7 +779,7 @@ body {
     transform: scale(0.98);
 }
 
-/* Message box for  "Try Now" but kept for consistency) */
+/* Message box for "Try Now" but kept for consistency) */
 .message-box {
     position: fixed;
     bottom: 20px;
