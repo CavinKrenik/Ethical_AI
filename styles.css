@@ -451,67 +451,11 @@ a:hover {
     text-align: left;
 }
 
-/* --- AI Tools Table Styles (General for both ai-tools-table and ai-ambassadors-table) --- */
-/* The .ai-tips-table is no longer used, so removed its specific rules */
-.ai-tools-table {
-    width: 98%; /* Keep it within 98% of its parent for small margins */
-    min-width: unset; /* Remove fixed min-width to allow shrinking below 700px */
-    max-width: 1200px;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 1.5rem auto;
-    font-size: 1.05rem;
-    background: rgba(30, 40, 60, 0.98);
-    border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
-    table-layout: fixed; /* This is crucial: ensures columns have a fixed width */
-}
-
-.ai-tools-table th,
-.ai-tools-table td {
-    padding: 0.7em 1em;
-    text-align: left;
-    border-right: 2px solid #111; /* vertical black lines */
-    overflow-wrap: break-word;
-    word-wrap: break-word; /* Older browser fallback */
-}
-
-.ai-tools-table th:last-child,
-.ai-tools-table td:last-child {
-    border-right: none;
-}
-
-.ai-tools-table th {
-    background: #223344;
-    color: #b5e0ff;
-    border-bottom: 2px solid #3a4a5a;
-    font-weight: 600;
-}
-
-.ai-tools-table tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.ai-tools-table tr:hover {
-    background: rgba(102, 204, 255, 0.08);
-}
-
-.ai-tools-table a {
-    color: #66ccff;
-    text-decoration: underline;
-    word-break: break-all;
-}
-
-/* Ensure colgroup is treated correctly for tables */
-.ai-tools-table colgroup {
-    display: table-column-group;
-}
-
 /* Specific styles for the AI Ambassadors Table */
 .ai-ambassadors-table {
     width: 98%;
-    min-width: 340px; /* Kept from your original inline style */
-    max-width: 900px; /* Kept from your original inline style */
+    /* min-width: 340px; This was removed in the previous fix for better flexibility. */
+    max-width: 900px;
     border-collapse: separate;
     border-spacing: 0;
     margin: 1.5rem auto;
@@ -519,7 +463,7 @@ a:hover {
     background: rgba(30, 40, 60, 0.98);
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
-    table-layout: fixed;
+    table-layout: auto; /* Changed from 'fixed' to 'auto' for better content wrapping */
 }
 
 .ai-ambassadors-table th,
@@ -559,25 +503,26 @@ a:hover {
 
 /* Category header rows for AI Ambassadors table */
 .ai-ambassadors-table .category-header td {
-    background: #4a5a6a; /* A slightly darker background for category headers */
+    background: #4a5a6a;
     color: #fff;
     font-weight: bold;
     text-align: center;
     padding: 0.8em 1em;
-    border-right: none; /* No vertical lines on category headers */
+    border-right: none;
     border-bottom: 2px solid #3a4a5a;
     border-top: 2px solid #3a4a5a;
-    position: sticky; /* Make headers sticky for better scrolling experience */
-    top: 0; /* Stick to the top of the container */
-    z-index: 10; /* Ensure it stays above other table content */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 /* Responsive Table for both AI Tools and AI Ambassadors */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .ai-tools-table,
     .ai-ambassadors-table {
         min-width: unset;
         width: 100%;
+        table-layout: auto; /* Ensures table is fluid at this breakpoint */
     }
 
     .ai-tools-table thead,
@@ -593,13 +538,13 @@ a:hover {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
         padding: 0.5em 0;
-        display: block; /* Make rows behave as blocks for stacking */
-        width: 100%; /* Take full width */
+        display: block;
+        width: 100%;
     }
 
     .ai-ambassadors-table .category-header td {
-        border-radius: 8px 8px 0 0; /* Rounded top corners for category headers */
-        margin-bottom: 0; /* Remove margin-bottom from category headers in mobile */
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 0;
     }
 
     .ai-tools-table td,
@@ -608,7 +553,7 @@ a:hover {
         width: 100%;
         border: none;
         border-right: none;
-        padding: 0.6em 1em;
+        padding: 0.8em 1.2em; /* Slightly increased padding for better separation */
         font-size: 1em;
         align-items: flex-start;
         overflow-wrap: break-word;
@@ -618,12 +563,35 @@ a:hover {
     .ai-tools-table td:before,
     .ai-ambassadors-table td:before {
         content: attr(data-label);
-        flex: 0 0 100px;
+        flex: 0 0 clamp(90px, 30%, 120px); /* Flexible label width */
         color: #b5e0ff;
         font-weight: 600;
         margin-right: 1em;
         font-size: 0.98em;
         white-space: normal;
+        text-align: right; /* Aligns label text to the right */
+        padding-right: 0.5em; /* Small gap between label and content */
+    }
+}
+
+/* Finer breakpoint for very small mobile screens */
+@media (max-width: 500px) {
+    .ai-tools-table tr,
+    .ai-ambassadors-table tr {
+        margin-bottom: 1em; /* Slightly reduce spacing between cards */
+    }
+
+    .ai-tools-table td,
+    .ai-ambassadors-table td {
+        padding: 0.6em 1em; /* Reduce padding within cells for compactness */
+        font-size: 0.95em; /* Slightly smaller font */
+    }
+
+    .ai-tools-table td:before,
+    .ai-ambassadors-table td:before {
+        flex: 0 0 clamp(70px, 35%, 100px); /* Adjusted label width for very narrow screens */
+        font-size: 0.9em; /* Smaller label font */
+        margin-right: 0.5em; /* Reduce margin to content */
     }
 }
 
@@ -812,4 +780,45 @@ body {
     .rolodex-container {
         padding: 1rem;
     }
+
+    @media print {
+    /* Ensure the table fits the printed page */
+    .ai-ambassadors-table {
+        width: 100% !important; /* Force full width on print */
+        table-layout: auto !important; /* Allow column widths to adjust naturally */
+        font-size: 0.9em; /* Slightly smaller font for better fit */
+        border-collapse: collapse; /* Use collapse for print borders */
+    }
+
+    /* Add visible borders for print as screen styles might not render well */
+    .ai-ambassadors-table th,
+    .ai-ambassadors-table td {
+        border: 1px solid #ccc !important;
+        padding: 5px !important;
+        background: #fff !important; /* Ensure readable background on print */
+        color: #000 !important; /* Ensure readable text color on print */
+    }
+
+    /* Prevent table rows from breaking across print pages */
+    .ai-ambassadors-table tr {
+        break-inside: avoid; /* Standard property for modern browsers */
+        page-break-inside: avoid; /* Older property for broader compatibility */
+    }
+
+    /* Prevent category headers from being the last item on a print page */
+    .ai-ambassadors-table .category-header td {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* Hide non-essential elements when printing */
+    .navbar, .jump-nav, footer, .background-overlay, .message-box {
+        display: none !important;
+    }
+
+    /* Adjust padding for the main content area for print */
+    main {
+        padding: 10mm; /* Add some margin to the printed page */
+    }
+}
 }
