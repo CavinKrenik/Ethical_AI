@@ -17,9 +17,15 @@ body {
 }
 
 /* Navbar styles */
+.navbar {
+    margin-top: 0; /* Ensures the navbar is flush with the top */
+    padding-top: 0;
+}
+
 .navbar ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 0; /* Ensures the unordered list inside the navbar is also flush */
     display: flex;
     justify-content: space-around;
     background-color: rgba(23, 20, 20, 0.937);
@@ -92,6 +98,28 @@ body {
         padding: 10px 15px;
         text-align: center;
     }
+    /* Modified nav bar media query */
+@media screen and (max-width: 600px) { /* Changed from 480px to 600px */
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0; /* Ensure no extra padding causes overflow */
+        margin: 0; /* Ensure no extra margin causes overflow */
+        width: 100%; /* Add this: Make the ul take full width */
+    }
+    .navbar li { /* Add this new rule */
+        width: 100%; /* Make each list item take full width */
+        margin: 5px 0; /* Add vertical spacing between stacked items */
+    }
+    .navbar a {
+        padding: 8px 10px; /* Slightly less padding for vertical items */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+        display: block; /* Ensure the link fills the list item */
+    }
+    .navbar li:last-child a {
+        border-bottom: none; /* No separator for the last item */
+    }
+}
 }
 
 
