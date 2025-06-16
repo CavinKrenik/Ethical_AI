@@ -1,6 +1,8 @@
 /* styles.css */
 
-/* Reset and base styles */
+
+/*BASE STYLES */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -16,7 +18,9 @@ body {
     cursor: url('orange.cur'), auto;
 }
 
-/* Navbar styles */
+
+/* NAVIGATION BAR */
+
 .navbar {
     margin-top: 0; /* Ensures the navbar is flush with the top */
     padding-top: 0;
@@ -44,7 +48,9 @@ body {
     border-radius: 5px;
 }
 
-/* Jump-to Navigation styles */
+
+/* JUMP-TO NAVIGATION */
+
 .jump-nav {
     margin: 20px auto;
     text-align: center;
@@ -98,21 +104,23 @@ body {
         padding: 10px 15px;
         text-align: center;
     }
-    /* Modified nav bar media query */
+    
+/* RESPONSIVE NAVIGATION BAR */
+
 @media screen and (max-width: 600px) { /* Changed from 480px to 600px */
     .navbar ul {
         flex-direction: column;
         text-align: center;
-        padding: 0; /* Ensure no extra padding causes overflow */
-        margin: 0; /* Ensure no extra margin causes overflow */
-        width: 100%; /* Add this: Make the ul take full width */
+        padding: 0; 
+        margin: 0; 
+        width: 100%; 
     }
     .navbar li { /* Add this new rule */
         width: 100%; /* Make each list item take full width */
         margin: 5px 0; /* Add vertical spacing between stacked items */
     }
     .navbar a {
-        padding: 8px 10px; /* Slightly less padding for vertical items */
+        padding: 8px 10px; /* less padding for vertical items */
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
         display: block; /* Ensure the link fills the list item */
     }
@@ -123,7 +131,9 @@ body {
 }
 
 
-/* Header styles */
+
+/* HEADER */
+
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -136,7 +146,9 @@ header {
     text-shadow: 2px 2px 6px #e409ad, 0 1px 0 rgba(238, 236, 237, 0.912);
 }
 
-/* Transparent content boxes */
+
+/* TRANSPARENT CONTENT BOXES */
+
 .transparent-box {
     background: rgba(10,10,10,0.85);
     color: #fff;
@@ -148,7 +160,7 @@ header {
     width: 100%;
     text-align: left;
     box-sizing: border-box;
-    word-break: break-word; /* Using break-word for general transparent box content */
+    word-break: break-word; /* Using break-word for transparent box content */
     overflow-wrap: break-word;
 }
 
@@ -168,7 +180,9 @@ header {
     }
 }
 
-/* Columns layout */
+
+/* GENERAL COLUMN LAYOUT */
+
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -183,7 +197,9 @@ header {
     border-radius: 8px;
 }
 
-/* AI Columns layout */
+
+/* AI-SPECIFIC COLUMN LAYOUT */
+
 .ai-columns {
     display: flex;
     flex-wrap: wrap;
@@ -204,14 +220,16 @@ header {
     margin-bottom: 1.5em;
 }
 
-/* Footer styles */
+
+/* FOOTER */
+
 footer {
     margin-top: 40px;
     text-align: center;
     color: #aaa;
 }
 
-/* General link color for better visibility */
+/* link color for better visibility */
 a {
     color: #66ccff; /* A brighter blue for better contrast */
     text-decoration: none;
@@ -221,14 +239,18 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Centered heading style */
+
+/* HEADINGS */
+
 .center-heading {
     text-align: center;
     margin-top: 0;
     margin-bottom: 2rem;
 }
 
-/* Two column flexbox layout */
+
+/* TWO-COLUMN FLEX LAYOUT */
+
 .two-column-flex {
     display: flex;
     gap: 2rem;
@@ -245,7 +267,9 @@ a:hover {
     }
 }
 
-/* Avatar flexbox layout */
+
+/* AVATAR FLEX LAYOUT */
+
 .avatar-flex-row {
     display: flex;
     gap: 2rem;
@@ -261,9 +285,9 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* Scalable image that fits nicely in a flexbox */
+/* Scalable image that fits in a flexbox */
 .scalable-image {
-    max-width: 350px;    /* or another value like 300px */
+    max-width: 350px;   
     width: 100%;
     height: auto;
     display: block;
@@ -271,14 +295,18 @@ a:hover {
     border-radius: 10px;
 }
 
-/* Responsive breakpoints */
+
+/* RESPONSIVE BREAKPOINTS */
+
 @media screen and (max-width: 768px) {
     .columns {
         flex-direction: column;
     }
 }
 
-/* Modified nav bar media query */
+
+/* RESPONSIVE NAVIGATION BAR */
+
 @media screen and (max-width: 600px) { /* Changed from 480px to 600px */
     .navbar ul {
         flex-direction: column;
@@ -321,29 +349,22 @@ a:hover {
 }
 
 .transparent-box h2 {
-    margin-top: 0; /* Good practice if it's the first element */
+    margin-top: 0; 
 }
 
 /* Styling for the "Key Insights You'll Gain Here" list */
 .transparent-box ul {
-    list-style-type: none; /* Removes default bullets if you prefer custom styling */
+    list-style-type: none; 
     padding-left: 0; /* Removes default padding */
 }
 
 .transparent-box ul li {
-    margin-bottom: 15px; /* Space between list items */
-    padding-left: 25px; /* Indent text if using a custom bullet or background icon */
-    position: relative; /* Useful for custom bullets */
+    margin-bottom: 15px; 
+    padding-left: 25px; 
+    position: relative; 
     line-height: 1.6;
 }
 
-/* Optional: Custom bullets for the "Key Insights" list */
-/* .transparent-box ul li::before {
-    content: '⭐'; /* Or any other icon/emoji/image */
-/* position: absolute; */
-/* left: 0; */
-/* color: #007bff; */ /* Example color */
-/* } */
 
 /* Styling for "Explore Our Core Topics" section */
 .topic-links {
@@ -482,7 +503,6 @@ a:hover {
 /* Specific styles for the AI Ambassadors Table */
 .ai-ambassadors-table {
     width: 98%;
-    /* min-width: 340px; This was removed in the previous fix for better flexibility. */
     max-width: 900px;
     border-collapse: separate;
     border-spacing: 0;
@@ -624,7 +644,9 @@ a:hover {
 }
 
 
-/* Flashcard Specific Styles */
+
+/* FLASHCARDS */
+
 .flashcard-section {
     padding: 2.5rem; /* Ensure sufficient padding for the flashcard content */
 }
@@ -709,11 +731,9 @@ a:hover {
 /* Example: Apply Honk font to headings */
 h1, h2/* Remove or comment out any blur filter or heavy opacity */
 .background-overlay {
-    /* Remove filter: blur(...) or backdrop-filter: blur(...); */
-    /* Remove or set background: rgba(0,0,0,0.5); to a lower opacity or none */
+
     background: none; /* or transparent */
-    /* filter: none; */
-    /* backdrop-filter: none; */
+
 }
 
 /* If you want a slight dark overlay for readability, use a very low opacity: */
@@ -722,18 +742,21 @@ h1, h2 {
     font-family: 'Honk', cursive;
 }
 
-/* Styles for the AI Tool Rolodex */
+
+/* AI TOOL ROLODEX */
+
 body {
-    /* Existing body styles in styles.css will apply,
-        but override background-color with the one from the rolodex if desired. */
+ 
     background-color: #831ee745; /* Light gray background for the overall page */
     font-family: 'Inter', sans-serif; /* Ensure Inter font is used for rolodex content */
 }
 
-/* Styles for tab buttons */
+
+/* TAB BUTTONS */
+
 .tab-button.active {
-    background-color: #dcef13; /* Blue-700 */
-    color: #eb0c96df; /* White text */
+    background-color: #dcef13; /* yellow*/
+    color: #eb0c96df; /*pinktext */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
@@ -744,7 +767,9 @@ body {
     display: block;
 }
 
-/* Styles for individual tool cards */
+
+/* TOOL CARD STYLING */
+
 .tool-card {
     background-color: #0909033a;
     border-radius: 12px;
@@ -758,7 +783,9 @@ body {
     box-shadow: 0 6px 16px rgba(253, 7, 240, 0.426);
 }
 
-/* Styles for the "Try Now" button */
+
+/* TRY NOW BUTTON */
+
 .try-now-button {
     transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
     display: inline-flex; /* To ensure padding and alignment are correct for anchor tag */
@@ -767,11 +794,11 @@ body {
     white-space: nowrap; /* Prevent text wrap */
 }
 .try-now-button:hover {
-    background-color: #fb0fc8; /* Blue-500 */
+    background-color: #fb0fc8; /*pink */
     transform: scale(1.02);
 }
 .try-now-button:active {
-    background-color: #fb08b6; /* Blue-700 */
+    background-color: #fb08b6; /*pink */
     transform: scale(0.98);
 }
 
@@ -794,7 +821,9 @@ body {
     opacity: 1;
 }
 
-/* Responsive adjustments */
+
+/* RESPONSIVE TAB BUTTONS */
+
 @media (max-width: 768px) {
     .tab-buttons {
         flex-wrap: wrap;
