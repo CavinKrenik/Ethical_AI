@@ -3,7 +3,8 @@
 
 /*BASE STYLES */
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -22,14 +23,16 @@ body {
 /* NAVIGATION BAR */
 
 .navbar {
-    margin-top: 0; /* Ensures the navbar is flush with the top */
+    margin-top: 0;
+    /* Ensures the navbar is flush with the top */
     padding-top: 0;
 }
 
 .navbar ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 0; /* Ensures the unordered list inside the navbar is also flush */
+    margin-top: 0;
+    /* Ensures the unordered list inside the navbar is also flush */
     display: flex;
     justify-content: space-around;
     background-color: rgba(23, 20, 20, 0.937);
@@ -55,7 +58,8 @@ body {
     margin: 20px auto;
     text-align: center;
     max-width: 900px;
-    background-color: rgba(10, 10, 10, 0.85); /* Matches transparent-box background */
+    background-color: rgba(10, 10, 10, 0.85);
+    /* Matches transparent-box background */
     border-radius: 10px;
     padding: 10px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -75,7 +79,8 @@ body {
 }
 
 .jump-nav a {
-    color: #66ccff; /* Bright blue for visibility */
+    color: #66ccff;
+    /* Bright blue for visibility */
     text-decoration: none;
     padding: 8px 12px;
     display: block;
@@ -96,38 +101,53 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
     .jump-nav li {
         margin: 5px 0;
-        width: 90%; /* Take up more width */
+        width: 90%;
+        /* Take up more width */
     }
+
     .jump-nav a {
         padding: 10px 15px;
         text-align: center;
     }
-    
-/* RESPONSIVE NAVIGATION BAR */
 
-@media screen and (max-width: 600px) { /* Changed from 480px to 600px */
-    .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        padding: 0; 
-        margin: 0; 
-        width: 100%; 
+    /* RESPONSIVE NAVIGATION BAR */
+
+    @media screen and (max-width: 600px) {
+
+        /* Changed from 480px to 600px */
+        .navbar ul {
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .navbar li {
+            /* Add this new rule */
+            width: 100%;
+            /* Make each list item take full width */
+            margin: 5px 0;
+            /* Add vertical spacing between stacked items */
+        }
+
+        .navbar a {
+            padding: 8px 10px;
+            /* less padding for vertical items */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            /* Separator */
+            display: block;
+            /* Ensure the link fills the list item */
+        }
+
+        .navbar li:last-child a {
+            border-bottom: none;
+            /* No separator for the last item */
+        }
     }
-    .navbar li { /* Add this new rule */
-        width: 100%; /* Make each list item take full width */
-        margin: 5px 0; /* Add vertical spacing between stacked items */
-    }
-    .navbar a {
-        padding: 8px 10px; /* less padding for vertical items */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
-        display: block; /* Ensure the link fills the list item */
-    }
-    .navbar li:last-child a {
-        border-bottom: none; /* No separator for the last item */
-    }
-}
 }
 
 
@@ -150,17 +170,19 @@ header {
 /* TRANSPARENT CONTENT BOXES */
 
 .transparent-box {
-    background: rgba(10,10,10,0.85);
+    background: rgba(10, 10, 10, 0.85);
     color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
     padding: 2rem 2.5rem;
-    margin: 1.5rem auto; /* Centered margin for all transparent-boxes */
+    margin: 1.5rem auto;
+    /* Centered margin for all transparent-boxes */
     max-width: 600px;
     width: 100%;
     text-align: left;
     box-sizing: border-box;
-    word-break: break-word; /* Using break-word for transparent box content */
+    word-break: break-word;
+    /* Using break-word for transparent box content */
     overflow-wrap: break-word;
 }
 
@@ -189,7 +211,7 @@ header {
     gap: 20px;
 }
 
-.columns > div {
+.columns>div {
     flex: 1;
     min-width: 250px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -231,7 +253,8 @@ footer {
 
 /* link color for better visibility */
 a {
-    color: #66ccff; /* A brighter blue for better contrast */
+    color: #66ccff;
+    /* A brighter blue for better contrast */
     text-decoration: none;
 }
 
@@ -287,7 +310,7 @@ a:hover {
 
 /* Scalable image that fits in a flexbox */
 .scalable-image {
-    max-width: 350px;   
+    max-width: 350px;
     width: 100%;
     height: auto;
     display: block;
@@ -307,19 +330,28 @@ a:hover {
 
 /* RESPONSIVE NAVIGATION BAR */
 
-@media screen and (max-width: 600px) { /* Changed from 480px to 600px */
+@media screen and (max-width: 600px) {
+
+    /* Changed from 480px to 600px */
     .navbar ul {
         flex-direction: column;
         text-align: center;
-        padding: 0; /* Ensure no extra padding causes overflow */
-        margin: 0; /* Ensure no extra margin causes overflow */
+        padding: 0;
+        /* Ensure no extra padding causes overflow */
+        margin: 0;
+        /* Ensure no extra margin causes overflow */
     }
+
     .navbar a {
-        padding: 8px 10px; /* Slightly less padding for vertical items */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+        padding: 8px 10px;
+        /* Slightly less padding for vertical items */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Separator */
     }
+
     .navbar li:last-child a {
-        border-bottom: none; /* No separator for the last item */
+        border-bottom: none;
+        /* No separator for the last item */
     }
 }
 
@@ -329,9 +361,11 @@ a:hover {
         flex-direction: column;
         align-items: center;
     }
+
     .ai-columns ul {
         max-width: 600px;
     }
+
     .avatar-flex-row {
         flex-direction: column;
         align-items: center;
@@ -343,48 +377,57 @@ a:hover {
         flex-direction: column;
         align-items: center;
     }
+
     .transparent-box {
         max-width: 95vw;
     }
 }
 
 .transparent-box h2 {
-    margin-top: 0; 
+    margin-top: 0;
 }
 
 /* Styling for the "Key Insights You'll Gain Here" list */
 .transparent-box ul {
-    list-style-type: none; 
-    padding-left: 0; /* Removes default padding */
+    list-style-type: none;
+    padding-left: 0;
+    /* Removes default padding */
 }
 
 .transparent-box ul li {
-    margin-bottom: 15px; 
-    padding-left: 25px; 
-    position: relative; 
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
     line-height: 1.6;
 }
 
 
 /* Styling for "Explore Our Core Topics" section */
 .topic-links {
-    display: grid; /* Using grid for a flexible layout */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between topic items */
+    display: grid;
+    /* Using grid for a flexible layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive columns */
+    gap: 20px;
+    /* Space between topic items */
     margin-top: 20px;
 }
 
 .topic-link-item {
-    background-color: rgba(0, 0, 0, 0.05); /* Slightly different background for items */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Slightly different background for items */
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.1);
-    transition: none; /* Remove transform 0.3s ease, box-shadow 0.3s ease; */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: none;
+    /* Remove transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .topic-link-item:hover {
-    transform: none; /* Remove transform on hover */
-    box-shadow: none; /* Remove box-shadow on hover */
+    transform: none;
+    /* Remove transform on hover */
+    box-shadow: none;
+    /* Remove box-shadow on hover */
 }
 
 .topic-link-item h3 {
@@ -394,12 +437,14 @@ a:hover {
 
 .topic-link-item h3 a {
     text-decoration: none;
-    color: inherit; /* Inherits color from h3 */
+    color: inherit;
+    /* Inherits color from h3 */
 }
 
 .topic-link-item h3 a:hover {
     text-decoration: underline;
-    color: #a0dfff; /* A slightly lighter blue for emphasis */
+    color: #a0dfff;
+    /* A slightly lighter blue for emphasis */
 }
 
 .topic-link-item p {
@@ -411,13 +456,15 @@ a:hover {
 /* Responsive adjustments for topic links if needed */
 @media (max-width: 600px) {
     .topic-links {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        grid-template-columns: 1fr;
+        /* Stack items on smaller screens */
     }
 }
 
 /* Gallery container: stacks image rows vertically */
 .gallery-container {
-    display: grid; /* You can use grid or flex here */
+    display: grid;
+    /* You can use grid or flex here */
     gap: 24px;
     width: 100%;
     margin: 2rem 0;
@@ -427,7 +474,8 @@ a:hover {
 .image-row {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden; /* Hide scrollbar for continuous scroll */
+    overflow-x: hidden;
+    /* Hide scrollbar for continuous scroll */
     padding: 10px 0;
     background: #fff;
     border-radius: 8px;
@@ -435,6 +483,7 @@ a:hover {
     /* Remove scrollbars for a cleaner look */
     scrollbar-width: none;
 }
+
 .image-row::-webkit-scrollbar {
     display: none;
 }
@@ -448,6 +497,7 @@ a:hover {
     flex-shrink: 0;
     background: #eee;
 }
+
 .image-row img:last-child {
     margin-right: 0;
 }
@@ -458,7 +508,8 @@ a:hover {
     /* Flex container for columns: used for prompt tips and politeness sections */
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem; /* Space between columns */
+    gap: 2rem;
+    /* Space between columns */
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2rem;
@@ -471,7 +522,8 @@ a:hover {
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* Space between items in a column */
+    gap: 1.2rem;
+    /* Space between items in a column */
 }
 
 /* Responsive: stack columns vertically on smaller screens */
@@ -480,6 +532,7 @@ a:hover {
         flex-direction: column;
         gap: 1.5rem;
     }
+
     .tips-col {
         max-width: 100%;
     }
@@ -487,7 +540,8 @@ a:hover {
 
 /* Example row: used for contrasting prompt examples in tips */
 .example-row {
-    background: rgba(255,255,255,0.04); /* Subtle highlight */
+    background: rgba(255, 255, 255, 0.04);
+    /* Subtle highlight */
     border-radius: 8px;
     padding: 0.75rem 1rem;
     margin: 0.5rem 0;
@@ -511,7 +565,8 @@ a:hover {
     background: rgba(30, 40, 60, 0.98);
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
-    table-layout: auto; /* Changed from 'fixed' to 'auto' for better content wrapping */
+    table-layout: auto;
+    /* Changed from 'fixed' to 'auto' for better content wrapping */
 }
 
 .ai-ambassadors-table th,
@@ -566,11 +621,13 @@ a:hover {
 
 /* Responsive Table for both AI Tools and AI Ambassadors */
 @media (max-width: 600px) {
+
     .ai-tools-table,
     .ai-ambassadors-table {
         min-width: unset;
         width: 100%;
-        table-layout: auto; /* Ensures table is fluid at this breakpoint */
+        table-layout: auto;
+        /* Ensures table is fluid at this breakpoint */
     }
 
     .ai-tools-table thead,
@@ -601,7 +658,8 @@ a:hover {
         width: 100%;
         border: none;
         border-right: none;
-        padding: 0.8em 1.2em; /* Slightly increased padding for better separation */
+        padding: 0.8em 1.2em;
+        /* Slightly increased padding for better separation */
         font-size: 1em;
         align-items: flex-start;
         overflow-wrap: break-word;
@@ -611,35 +669,45 @@ a:hover {
     .ai-tools-table td:before,
     .ai-ambassadors-table td:before {
         content: attr(data-label);
-        flex: 0 0 clamp(90px, 30%, 120px); /* Flexible label width */
+        flex: 0 0 clamp(90px, 30%, 120px);
+        /* Flexible label width */
         color: #b5e0ff;
         font-weight: 600;
         margin-right: 1em;
         font-size: 0.98em;
         white-space: normal;
-        text-align: right; /* Aligns label text to the right */
-        padding-right: 0.5em; /* Small gap between label and content */
+        text-align: right;
+        /* Aligns label text to the right */
+        padding-right: 0.5em;
+        /* Small gap between label and content */
     }
 }
 
 /* Finer breakpoint for very small mobile screens */
 @media (max-width: 500px) {
+
     .ai-tools-table tr,
     .ai-ambassadors-table tr {
-        margin-bottom: 1em; /* Slightly reduce spacing between cards */
+        margin-bottom: 1em;
+        /* Slightly reduce spacing between cards */
     }
 
     .ai-tools-table td,
     .ai-ambassadors-table td {
-        padding: 0.6em 1em; /* Reduce padding within cells for compactness */
-        font-size: 0.95em; /* Slightly smaller font */
+        padding: 0.6em 1em;
+        /* Reduce padding within cells for compactness */
+        font-size: 0.95em;
+        /* Slightly smaller font */
     }
 
     .ai-tools-table td:before,
     .ai-ambassadors-table td:before {
-        flex: 0 0 clamp(70px, 35%, 100px); /* Adjusted label width for very narrow screens */
-        font-size: 0.9em; /* Smaller label font */
-        margin-right: 0.5em; /* Reduce margin to content */
+        flex: 0 0 clamp(70px, 35%, 100px);
+        /* Adjusted label width for very narrow screens */
+        font-size: 0.9em;
+        /* Smaller label font */
+        margin-right: 0.5em;
+        /* Reduce margin to content */
     }
 }
 
@@ -648,31 +716,40 @@ a:hover {
 /* FLASHCARDS */
 
 .flashcard-section {
-    padding: 2.5rem; /* Ensure sufficient padding for the flashcard content */
+    padding: 2.5rem;
+    /* Ensure sufficient padding for the flashcard content */
 }
 
 .flashcard-container {
     position: relative;
     width: 100%;
-    min-height: 300px; /* Adjust as needed based on content height */
+    min-height: 300px;
+    /* Adjust as needed based on content height */
     margin: 2rem auto;
     border-radius: 1rem;
-    overflow: hidden; /* Ensures content doesn't spill out */
-    background: rgba(10, 10, 10, 0.85); /* Matches transparent-box background */
+    overflow: hidden;
+    /* Ensures content doesn't spill out */
+    background: rgba(10, 10, 10, 0.85);
+    /* Matches transparent-box background */
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-    display: flex; /* Use flex to center the flashcards */
+    display: flex;
+    /* Use flex to center the flashcards */
     justify-content: center;
     align-items: center;
 }
 
 .flashcard {
-    width: 90%; /* Take up most of the container width */
-    max-width: 700px; /* Limit max width for readability */
+    width: 90%;
+    /* Take up most of the container width */
+    max-width: 700px;
+    /* Limit max width for readability */
     padding: 1.5rem;
     box-sizing: border-box;
     text-align: left;
-    display: none; /* Hidden by default, JavaScript controls visibility */
-    animation: fadeIn 0.5s ease-out; /* Optional: subtle fade in effect */
+    display: none;
+    /* Hidden by default, JavaScript controls visibility */
+    animation: fadeIn 0.5s ease-out;
+    /* Optional: subtle fade in effect */
 }
 
 .flashcard h3 {
@@ -680,7 +757,8 @@ a:hover {
     margin-top: 0;
     margin-bottom: 1em;
     font-size: 1.5em;
-    text-align: center; /* Center flashcard titles */
+    text-align: center;
+    /* Center flashcard titles */
 }
 
 .flashcard p {
@@ -690,7 +768,8 @@ a:hover {
 }
 
 .flashcard .example-row {
-    background: rgba(157, 149, 149, 0.851); /* Slightly more prominent for examples */
+    background: rgba(157, 149, 149, 0.851);
+    /* Slightly more prominent for examples */
     border-radius: 8px;
     padding: 1em 1.2em;
     margin-top: 1.5em;
@@ -706,8 +785,10 @@ a:hover {
 }
 
 .flashcard-navigation button {
-    background-color: #66ccff; /* Bright blue button */
-    color: #000; /* Dark text for contrast */
+    background-color: #66ccff;
+    /* Bright blue button */
+    color: #000;
+    /* Dark text for contrast */
     border: none;
     padding: 10px 25px;
     border-radius: 5px;
@@ -718,27 +799,40 @@ a:hover {
 }
 
 .flashcard-navigation button:hover {
-    background-color: #a0dfff; /* Lighter blue on hover */
+    background-color: #a0dfff;
+    /* Lighter blue on hover */
     transform: translateY(-2px);
 }
 
 /* Optional: Fade in animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Example: Apply Honk font to headings */
-h1, h2/* Remove or comment out any blur filter or heavy opacity */
+h1,
+h2
+
+/* Remove or comment out any blur filter or heavy opacity */
 .background-overlay {
 
-    background: none; /* or transparent */
+    background: none;
+    /* or transparent */
 
 }
 
 /* If you want a slight dark overlay for readability, use a very low opacity: */
 /* Example: To apply Honk font to headings, use: */
-h1, h2 {
+h1,
+h2 {
     font-family: 'Honk', cursive;
 }
 
@@ -746,23 +840,29 @@ h1, h2 {
 /* AI TOOL ROLODEX */
 
 body {
- 
-    background-color: #831ee745; /* Light gray background for the overall page */
-    font-family: 'Inter', sans-serif; /* Ensure Inter font is used for rolodex content */
+
+    background-color: #831ee745;
+    /* Light gray background for the overall page */
+    font-family: 'Inter', sans-serif;
+    /* Ensure Inter font is used for rolodex content */
 }
 
 
 /* TAB BUTTONS */
 
 .tab-button.active {
-    background-color: #dcef13; /* yellow*/
-    color: #eb0c96df; /*pinktext */
+    background-color: #dcef13;
+    /* yellow*/
+    color: #eb0c96df;
+    /*pinktext */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
+
 .tab-content {
     display: none;
 }
+
 .tab-content.active {
     display: block;
 }
@@ -778,6 +878,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.323);
     transition: transform 0.2s ease-in-out;
 }
+
 .tool-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(253, 7, 240, 0.426);
@@ -788,17 +889,23 @@ body {
 
 .try-now-button {
     transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-    display: inline-flex; /* To ensure padding and alignment are correct for anchor tag */
+    display: inline-flex;
+    /* To ensure padding and alignment are correct for anchor tag */
     align-items: center;
     justify-content: center;
-    white-space: nowrap; /* Prevent text wrap */
+    white-space: nowrap;
+    /* Prevent text wrap */
 }
+
 .try-now-button:hover {
-    background-color: #fb0fc8; /*pink */
+    background-color: #fb0fc8;
+    /*pink */
     transform: scale(1.02);
 }
+
 .try-now-button:active {
-    background-color: #fb08b6; /*pink */
+    background-color: #fb08b6;
+    /*pink */
     transform: scale(0.98);
 }
 
@@ -817,6 +924,7 @@ body {
     transition: opacity 0.3s ease-in-out;
     z-index: 1000;
 }
+
 .message-box.show {
     opacity: 1;
 }
@@ -829,53 +937,69 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .tab-button {
         margin: 0.5rem 0.25rem;
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
     }
+
     .rolodex-container {
         padding: 1rem;
     }
 
     @media print {
-    /* Ensure the table fits the printed page */
-    .ai-ambassadors-table {
-        width: 100% !important; /* Force full width on print */
-        table-layout: auto !important; /* Allow column widths to adjust naturally */
-        font-size: 0.9em; /* Slightly smaller font for better fit */
-        border-collapse: collapse; /* Use collapse for print borders */
-    }
 
-    /* Add visible borders for print as screen styles might not render well */
-    .ai-ambassadors-table th,
-    .ai-ambassadors-table td {
-        border: 1px solid #ccc !important;
-        padding: 5px !important;
-        background: #fff !important; /* Ensure readable background on print */
-        color: #000 !important; /* Ensure readable text color on print */
-    }
+        /* Ensure the table fits the printed page */
+        .ai-ambassadors-table {
+            width: 100% !important;
+            /* Force full width on print */
+            table-layout: auto !important;
+            /* Allow column widths to adjust naturally */
+            font-size: 0.9em;
+            /* Slightly smaller font for better fit */
+            border-collapse: collapse;
+            /* Use collapse for print borders */
+        }
 
-    /* Prevent table rows from breaking across print pages */
-    .ai-ambassadors-table tr {
-        break-inside: avoid; /* Standard property for modern browsers */
-        page-break-inside: avoid; /* Older property for broader compatibility */
-    }
+        /* Add visible borders for print as screen styles might not render well */
+        .ai-ambassadors-table th,
+        .ai-ambassadors-table td {
+            border: 1px solid #ccc !important;
+            padding: 5px !important;
+            background: #fff !important;
+            /* Ensure readable background on print */
+            color: #000 !important;
+            /* Ensure readable text color on print */
+        }
 
-    /* Prevent category headers from being the last item on a print page */
-    .ai-ambassadors-table .category-header td {
-        break-after: avoid;
-        page-break-after: avoid;
-    }
+        /* Prevent table rows from breaking across print pages */
+        .ai-ambassadors-table tr {
+            break-inside: avoid;
+            /* Standard property for modern browsers */
+            page-break-inside: avoid;
+            /* Older property for broader compatibility */
+        }
 
-    /* Hide non-essential elements when printing */
-    .navbar, .jump-nav, footer, .background-overlay, .message-box {
-        display: none !important;
-    }
+        /* Prevent category headers from being the last item on a print page */
+        .ai-ambassadors-table .category-header td {
+            break-after: avoid;
+            page-break-after: avoid;
+        }
 
-    /* Adjust padding for the main content area for print */
-    main {
-        padding: 10mm; /* Add some margin to the printed page */
+        /* Hide non-essential elements when printing */
+        .navbar,
+        .jump-nav,
+        footer,
+        .background-overlay,
+        .message-box {
+            display: none !important;
+        }
+
+        /* Adjust padding for the main content area for print */
+        main {
+            padding: 10mm;
+            /* Add some margin to the printed page */
+        }
     }
-}
 }
